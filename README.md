@@ -1,14 +1,48 @@
-# Portfolio Responsive Complete
-## [Watch it on youtube](https://youtu.be/AKNvTxWOdKw)
-### Portfolio Responsive Complete
+# Halimat Aminu - Cybersecurity Portfolio
 
-- Responsive Personal Portfolio Website HTML CSS & JavaScript.
-- Contains animations when scrolling.
-- Smooth scrolling in each section.
-- Developed first with the Mobile First methodology, then for desktop.
-- Compatible with all mobile devices and with a beautiful and pleasant user interface.
+A professional portfolio website for Halimat Aminu, Cybersecurity Engineer & Chief Technology Officer. This website showcases cybersecurity expertise, professional experience, projects, and thought leadership.
 
-💙 Join the channel to see more videos like this. [Bedimcode](https://www.youtube.com/@Bedimcode)
+## Features
 
-![preview img](/preview.png)
+- 🛡️ **Cybersecurity-Focused Design**: Dark theme with security-inspired elements
+- 📱 **Fully Responsive**: Works perfectly on all devices
+- ⚡ **High Performance**: Optimized for fast loading
+- 🎨 **Modern UI/UX**: Clean, professional interface with animations
+- 📊 **Interactive Elements**: 
+  - Skills radar chart
+  - Network animation
+  - Project case studies
+  - Blog with filtering
+- 🔐 **Security Features**: 
+  - Secure contact form
+  - HTTPS-ready
+  - PGP key integration
 
+## Pages
+
+1. **Home** - Landing page with hero section, stats, and overview
+2. **About** - Professional background and expertise
+3. **Experience** - Detailed work history with achievements
+4. **Projects** - Case studies with technical details
+5. **Blog** - Cybersecurity articles and insights
+6. **Contact** - Secure contact form with PGP key
+
+## Technologies Used
+
+- HTML5, CSS3, JavaScript (ES6+)
+- SCSS for styling
+- Chart.js for skills visualization
+- Boxicons for icons
+- Google Fonts (Space Grotesk, Inter)
+
+## Getting Started
+
+### Prerequisites
+- A modern web browser
+- Basic text editor (VS Code recommended)
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/Halimatcd/halimatcd.github.io.git

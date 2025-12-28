@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Halimat Aminu - Cybersecurity Engineer</title>
+    <meta name="description" content="Detailed cybersecurity projects and case studies by Halimat Aminu">
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    
+    <!-- Projects CSS -->
+    <style>
+        .projects-hero {
+            padding: 10rem 0 6rem;
+            background: linear-gradient(135deg, rgba(10, 14, 23, 0.9), rgba(19, 24, 42, 0.9)),
+                        url('../assets/img/work3.jpg') center/cover;
+            text-align: center;
+        }
+        
+        .projects-hero__title {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .projects-hero__subtitle {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .case-study {
+            padding: 6rem 0;
+            background: var(--dark-color);
+        }
+        
+        .case-study:nth-child(even) {
+            background: var(--dark-color-alt);
+        }
+        
+        .case-study__container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .case-study__image {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .case-study__image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .case-study:hover .case-study__image img {
+            transform: scale(1.05);
+        }
+        
+        .case-study__tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .case-study__tag {
+            padding: 0.25rem 1rem;
+            background: rgba(0, 212, 255, 0.1);
+            border: 1px solid var(--primary-color);
+            border-radius: 20px;
+            font-size: 0.875rem;
+            color: var(--primary-color);
+        }
+        
+        .case-study__stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .case-study__stat {
+            text-align: center;
+        }
+        
+        .case-study__stat-number {
+            display: block;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .case-study__stat-label {
+            font-size: 0.875rem;
+            color: var(--gray-color);
+        }
+        
+        .case-study__challenge,
+        .case-study__solution,
+        .case-study__results {
+            margin-bottom: 1.5rem;
+        }
+        
+        .case-study__subtitle {
+            font-size: 1.25rem;
+            color: var(--primary-color);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .case-study__tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin: 1.5rem 0;
+        }
+        
+        .tech-stack__item {
+            padding: 0.5rem 1rem;
+            background: var(--dark-color);
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+        }
+        
+        .tech-stack__item i {
+            color: var(--primary-color);
+            font-size: 1.25rem;
+        }
+        
+        .back-to-home {
+            text-align: center;
+            padding: 3rem 0;
+        }
+        
+        @media (max-width: 992px) {
+            .case-study__container {
+                grid-template-columns: 1fr;
+            }
+            
+            .case-study__stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .projects-hero__title {
+                font-size: 2.5rem;
+            }
+            
+            .case-study__stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header (Same as index.html) -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="../index.html" class="nav__logo">
+                <span class="nav__logo-circle">HA</span>
+                <span class="nav__logo-name">Halimat Aminu</span>
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="../index.html" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../index.html#about" class="nav__link">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../index.html#experience" class="nav__link">Experience</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="projects.html" class="nav__link active-link">Projects</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../index.html#skills" class="nav__link">Skills</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="blog.html" class="nav__link">Blog</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../index.html#contact" class="nav__link">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class='bx bx-x'></i>
+                </div>
+            </div>
+
+            <div class="nav__buttons">
+                <i class='bx bx-moon change-theme' id="theme-button"></i>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Projects Hero -->
+    <section class="projects-hero">
+        <div class="container">
+            <h1 class="projects-hero__title">Cybersecurity Projects</h1>
+            <p class="projects-hero__subtitle">
+                Detailed case studies of security implementations, infrastructure designs, and DevSecOps pipelines
+            </p>
+        </div>
+    </section>
+
+    <!-- Case Study 1 -->
+    <section class="case-study">
+        <div class="container case-study__container">
+            <div class="case-study__image">
+                <img src="../assets/img/work1.jpg" alt="Cloud Security Architecture">
+            </div>
+            
+            <div class="case-study__content">
+                <div class="case-study__tags">
+                    <span class="case-study__tag">AWS</span>
+                    <span class="case-study__tag">Zero Trust</span>
+                    <span class="case-study__tag">Infrastructure</span>
+                    <span class="case-study__tag">Compliance</span>
+                </div>
+                
+                <h2 class="section__title">Enterprise Cloud Security Migration</h2>
+                <p class="case-study__description">
+                    Secured migration of enterprise infrastructure to AWS with zero-trust architecture, 
+                    automated compliance monitoring, and enhanced threat detection capabilities.
+                </p>
+                
+                <div class="case-study__stats">
+                    <div class="case-study__stat">
+                        <span class="case-study__stat-number">70%</span>
+                        <span class="case-study__stat-label">Reduced Attack Surface</span>
+                    </div>
+                    <div class="case-study__stat">
+                        <span class="case-study__stat-number">99.9%</span>
+                        <span class="case-study__stat-label">Uptime Achieved</span>
+                    </div>
+                    <div class="case-study__stat">
+                        <span class="case-study__stat-number">$150K</span>
+                        <span class="case-study__stat-label">Annual Savings</span>
+                    </div>
+                </div>
+                
+                <div class="case-study__challenge">
+                    <h3 class="case-study__subtitle">
+                        <i class='bx bx-error-circle'></i>
+                        Challenge
+                    </h3>
+                    <p>
+                        Legacy on-premise infrastructure with outdated security controls, 
+                        frequent security incidents, and inability to scale for business growth.
+                    </p>
+                </div>
+                
+                <div class="case-study__solution">
+                    <h3 class="case-study__subtitle">
+                        <i class='bx bx-bulb'></i>
+                        Solution
+                    </h3>
+                    <p>
+                        Designed and implemented AWS-based infrastructure with zero-trust principles, 
+                        automated security controls, and continuous compliance monitoring using 
+                        Infrastructure as Code (IaC) and DevSecOps practices.
+                    </p>
+                </div>
+                
+                <div class="case-study__tech-stack">
+                    <div class="tech-stack__item">
+                        <i class='bx bxl-aws'></i>
+                        AWS
+                    </div>
+                    <div class="tech-stack__item">
+                        <i class='bx bxl-terraform'></i>
+                        Terraform
+                    </div>
+                    <div class="tech-stack__item">
+                        <i class='bx bxl-docker'></i>
+                        Docker
+                    </div>
+                    <div class="tech-stack__item">
+                        <i class='bx bxl-kubernetes'></i>
+                        Kubernetes
+                    </div>
+                    <div class="tech-stack__item">
+                        <i class='bx bxl-python'></i>
+                        Python
+                    </div>
+                </div>
+                
+                <a href="#" class="button">
+                    <i class='bx bx-download'></i>
+                    Download Case Study PDF
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study 2 -->
+    <section class="case-study">
+        <div class="container case-study__container">
+            <div class="case-study__content">
+                <div class="case-study__tags">
+                    <span class="case-study__tag">DevSecOps</span>
+                    <span class="case-study__tag">CI/CD</span>
+                    <span class="case-study__tag">Automation</span>
+                    <span class="case-study__tag">Security Scanning</span>
+                </div>
+                
+                <h2 class="section__title">Automated DevSecOps Pipeline</h2>
+                <p class="case-study__description">
+                    Built end-to-end CI/CD pipeline with integrated security scanning, 
+                    secret management, and compliance validation for financial services applications.
+                </p>
+                
+                <div class="case-study__stats">
+                    <div class="case-study__stat">
+                        <span class="case-study__stat-number">85%</span>
+                        <span class="case-study__stat-label">Faster Deployments</span>
+                    </div>
+                    <div class="case-study__stat">
+                        <span class="case-study__stat-number">100%</span>
+                        <span class="case-study__stat-label">Security Compliance</span>
+                    </div>
+                    <div class="case-study__stat">
+                        <span class="case-study__stat-number">24/7</span>
+                        <span class="case-study__stat-label">Automated Monitoring</span>
+                    </div>
+                </div>
+                
+                <div class="case-study__challenge">
+                    <h3 class="case-study__subtitle">
+                        <i class='bx bx-error-circle'></i>
+                        Challenge
+                    </h3>
+                    <p>
+                        Manual security reviews causing deployment delays, inconsistent security controls, 
+                        and compliance violations in a regulated financial environment.
+                    </p>
+                </div>
+                
+                <div class="case-study__solution">
+                    <h3 class="case-study__subtitle">
+                        <i class='bx bx-bulb'></i>
+                        Solution
+                    </h3>
+                    <p>
+                        Implemented automated security gates in CI/CD pipeline including SAST, DAST, 
+                        container scanning, secret detection, and compliance validation using 
+                        Jenkins, SonarQube, and custom security scripts.
+                    </p>
+                </div>
+                
+                <div class="case-study__results">
+                    <h3 class="case-study__subtitle">
+                        <i class='bx bx-line-chart'></i>
+                        Results
+                    </h3>
+                    <ul>
+                        <li>Reduced deployment time from days to hours</li>
+                        <li>Eliminated security vulnerabilities in production</li>
+                        <li>Achieved continuous compliance with regulatory standards</li>
+                        <li>Enabled secure microservices deployment at scale</li>
+                    </ul>
+                </div>
+                
+                <div class="case-study__tech-stack">
+                    <div class="tech-stack__item">
+                        <i class='bx bxl-google'></i>
+                        Google Cloud
+                    </div>
+                    <div class="tech-stack__item">
+                        <i class='bx bxl-github'></i>
+                        GitHub Actions
+                    </div>
+                    <div class="tech-stack__item">
+                        <i class='bx bx-cube'></i>
+                        SonarQube
+                    </div>
+                    <div class="tech-stack__item">
+                        <i class='bx bxl-docker'></i>
+                        Trivy
+                    </div>
+                </div>
+            </div>
+            
+            <div class="case-study__image">
+                <img src="../assets/img/work2.jpg" alt="CI/CD Pipeline">
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study 3 -->
+    <section class="case-study">
+        <div class="container case-study__container">
+            <div class="case-study__image">
+                <img src="../assets/img/work3.jpg" alt="Network Security">
+            </div>
+            
+            <div class="case-study__content">
+                <div class="case-study__tags">
+                    <span class="case-study__tag">Zero Trust</span>
+                    <span class="case-study__tag">Network Security</span>
+                    <span class="case-study__tag">SASE</span>
+                    <span class="case-study__tag">Monitoring</span>
+                </div>
+                
+                <h2 class="section__title">Zero Trust Network Implementation</h2>
+                <p class="case-study__description">
+                    Designed and implemented zero-trust architecture across hybrid cloud environment 
+                    using SASE principles, reducing attack surface and improving threat detection.
+                </p>
+                
+                <div class="case-study__stats">
+                    <div class="case-study__stat">
+                        <span class="case-study__stat-number">60%</span>
+                        <span class="case-study__stat-label">Fewer Alerts</span>
+                    </div>
+                    <div class="case-study__stat">
+                        <span class="case-study__stat-number">99.99%</span>
+                        <span class="case-study__stat-label">Detection Accuracy</span>
+                    </div>
+                    <div class="case-study__stat">
+                        <span class="case-study__stat-number">0</span>
+                        <span class="case-study__stat-label">Security Breaches</span>
+                    </div>
+                </div>
+                
+                <div class="case-study__challenge">
+                    <h3 class="case-study__subtitle">
+                        <i class='bx bx-error-circle'></i>
+                        Challenge
+                    </h3>
+                    <p>
+                        Traditional perimeter-based security failing to protect against 
+                        advanced threats, excessive network access permissions, and 
+                        limited visibility into east-west traffic.
+                    </p>
+                </div>
+                
+                <div class="case-study__solution">
+                    <h3 class="case-study__subtitle">
+                        <i class='bx bx-bulb'></i>
+                        Solution
+                    </h3>
+                    <p>
+                        Implemented zero-trust network access (ZTNA) using Appgate SDP, 
+                        integrated with identity providers, implemented micro-segmentation, 
+                        and deployed advanced threat detection with Darktrace AI.
+                    </p>
+                </div>
+                
+                <div class="case-study__tech-stack">
+                    <div class="tech-stack__item">
+                        <i class='bx bx-shield-quarter'></i>
+                        Appgate
+                    </div>
+                    <div class="tech-stack__item">
+                        <i class='bx bx-network-chart'></i>
+                        Darktrace
+                    </div>
+                    <div class="tech-stack__item">
+                        <i class='bx bx-cloud'></i>
+                        Akamai
+                    </div>
+                    <div class="tech-stack__item">
+                        <i class='bx bx-user-check'></i>
+                        Okta
+                    </div>
+                </div>
+                
+                <a href="#" class="button">
+                    <i class='bx bx-code-alt'></i>
+                    View Implementation Details
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- More Projects Button -->
+    <section class="back-to-home">
+        <div class="container">
+            <h3>Want to see more projects?</h3>
+            <p>Check out my GitHub for open-source security tools and automation scripts.</p>
+            <a href="https://github.com/Halimatcd" class="button" target="_blank">
+                <i class='bx bxl-github'></i>
+                View GitHub Profile
+            </a>
+            <a href="../index.html" class="button button--ghost">
+                <i class='bx bx-home'></i>
+                Back to Home
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__content">
+                <a href="../index.html" class="footer__logo">
+                    <span class="footer__logo-circle">HA</span>
+                    <span class="footer__logo-name">Halimat Aminu</span>
+                </a>
+                
+                <p class="footer__description">
+                    Cybersecurity Engineer & CTO<br>
+                    Building secure digital futures
+                </p>
+                
+                <div class="footer__social">
+                    <a href="#" class="footer__social-link">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                    <a href="#" class="footer__social-link">
+                        <i class='bx bxl-linkedin'></i>
+                    </a>
+                    <a href="#" class="footer__social-link">
+                        <i class='bx bxl-twitter'></i>
+                    </a>
+                    <a href="#" class="footer__social-link">
+                        <i class='bx bxl-medium'></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer__links">
+                <h3 class="footer__title">Quick Links</h3>
+                <ul class="footer__list">
+                    <li><a href="../index.html" class="footer__link">Home</a></li>
+                    <li><a href="../index.html#about" class="footer__link">About</a></li>
+                    <li><a href="../index.html#experience" class="footer__link">Experience</a></li>
+                    <li><a href="projects.html" class="footer__link">Projects</a></li>
+                    <li><a href="../index.html#contact" class="footer__link">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer__links">
+                <h3 class="footer__title">Services</h3>
+                <ul class="footer__list">
+                    <li><a href="#" class="footer__link">Security Audits</a></li>
+                    <li><a href="#" class="footer__link">Cloud Security</a></li>
+                    <li><a href="#" class="footer__link">DevSecOps</a></li>
+                    <li><a href="#" class="footer__link">Incident Response</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer__newsletter">
+                <h3 class="footer__title">Security Insights</h3>
+                <p class="footer__newsletter-description">
+                    Subscribe for cybersecurity updates and best practices
+                </p>
+                <form class="footer__newsletter-form">
+                    <input type="email" placeholder="Your email" class="footer__newsletter-input">
+                    <button type="submit" class="footer__newsletter-button">
+                        <i class='bx bx-send'></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer__bottom">
+            <p class="footer__copy">
+                &copy; 2024 Halimat Aminu. All rights reserved. | 
+                <span class="footer__security">
+                    <i class='bx bxs-lock-alt'></i>
+                    Securely hosted with HTTPS
+                </span>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scroll Up -->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class='bx bx-up-arrow-alt'></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // Initialize page-specific JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add animation to case studies on scroll
+            const caseStudies = document.querySelectorAll('.case-study');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            caseStudies.forEach(study => {
+                study.style.opacity = '0';
+                study.style.transform = 'translateY(50px)';
+                study.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                observer.observe(study);
+            });
+        });
+    </script>
+</body>
+</html>
