@@ -69,178 +69,156 @@
 
                 <div class="about__container bd-grid">
                     <div class="about__img">
-                        <img src="assets/img/about.jpg" alt="">
-                    </div>
-                    
-                    <div>
-                        <h2 class="about__subtitle">I'm Halimat Aminu</h2>
-                        <p class="about__text">Cybersecurity Engineer with extensive experience architecting and operating secure, scalable cloud and DevSecOps platforms. I lead security programs, design secure infrastructure, and build teams that deliver resilient, compliant systems. Skilled in cloud security (AWS), CI/CD automation, threat detection, incident response, and security architecture.</p>           
-                    </div>                                   
-                </div>
-            </section>
+                        <body>
+                            <!--===== HEADER =====-->
+                            <header class="l-header">
+                                <nav class="nav container">
+                                    <a href="#" class="nav__logo">Halimat Aminu</a>
 
-            <!--===== EXPERIENCE =====-->
-            <section class="experience section" id="experience">
-                <h2 class="section-title">Experience</h2>
+                                    <ul class="nav__list" id="nav-menu">
+                                        <li><a class="nav__link active-link" href="#home">Home</a></li>
+                                        <li><a class="nav__link" href="#about">About</a></li>
+                                        <li><a class="nav__link" href="#experience">Experience</a></li>
+                                        <li><a class="nav__link" href="#projects">Projects</a></li>
+                                        <li><a class="nav__link" href="#contact">Contact</a></li>
+                                    </ul>
 
-                <div class="experience__container bd-grid">
-                    <div class="experience__item">
-                        <h3>Chief Technology Officer — Datalixe</h3>
-                        <p class="small">Sep 2023 - Present · United States</p>
-                        <ul>
-                            <li>Identify emerging technologies and market trends in cybersecurity, DevOps, AI, and analytics to drive innovation.</li>
-                            <li>Lead digital transformation initiatives and align tech strategy with business goals.</li>
-                            <li>Build, mentor, and scale high-performing technical teams across cybersecurity, AI/analytics, DevOps, and software development.</li>
-                        </ul>
-                    </div>
+                                    <div class="nav__actions">
+                                        <button id="theme-toggle" class="icon-btn" title="Toggle theme"><i class='bx bx-moon'></i></button>
+                                        <button id="nav-toggle" class="icon-btn" aria-label="menu"><i class='bx bx-menu'></i></button>
+                                    </div>
+                                </nav>
+                            </header>
 
-                    <div class="experience__item">
-                        <h3>DevSecOps Engineer — MAP Systems, Inc</h3>
-                        <p class="small">Jan 2025 - Dec 2025 · Canada</p>
-                        <ul>
-                            <li>Developed and maintained CI/CD pipelines (Jenkins, GitHub Actions, AWS CodePipeline).</li>
-                            <li>Managed cloud infrastructure on AWS with a focus on security, availability and cost efficiency.</li>
-                            <li>Created network architecture diagrams and implemented IAM, encryption and VPC controls.</li>
-                        </ul>
-                    </div>
+                            <main>
+                                <!-- HERO -->
+                                <section id="home" class="hero">
+                                    <div class="container hero__inner">
+                                        <div class="hero__left">
+                                            <h1 class="hero__title">Hi, I'm <span class="accent">Halimat Aminu</span></h1>
+                                            <p class="hero__subtitle">Cybersecurity Engineer • DevSecOps • Cloud Security</p>
+                                            <p class="hero__lead">I design secure cloud platforms, build reliable CI/CD pipelines, and lead security-driven engineering teams to deliver resilient systems.</p>
+                                            <div class="hero__ctas">
+                                                <a href="#projects" class="button">View Projects</a>
+                                                <a href="mailto:aminuhalimat.o@gmail.com" class="button button--ghost">Contact</a>
+                                            </div>
+                                            <div class="hero__links">
+                                                <a href="https://www.linkedin.com/in/halimat-aminu-40596719a/" target="_blank" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i> LinkedIn</a>
+                                                <a href="https://github.com/" target="_blank" aria-label="GitHub"><i class='bx bxl-github'></i> GitHub</a>
+                                            </div>
+                                        </div>
+                                        <div class="hero__right">
+                                            <div class="portrait">
+                                                <img src="assets/img/perfil.png" alt="Halimat Aminu">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
 
-                    <div class="experience__item">
-                        <h3>Lead Cyber Security Engineer — ASH NELSON PARTNERS</h3>
-                        <p class="small">Mar 2023 - Dec 2024 · Nigeria (Hybrid)</p>
-                        <ul>
-                            <li>Deployed and optimized cybersecurity solutions (Appgate, Akamai, Darktrace) and fraud management tools.</li>
-                            <li>Served as the primary contact for security enquiries and created security design documentation.</li>
-                        </ul>
-                    </div>
+                                <!-- ABOUT -->
+                                <section id="about" class="section">
+                                    <div class="container">
+                                        <h2 class="section-title">About</h2>
+                                        <div class="about__grid">
+                                            <div>
+                                                <h3>Overview</h3>
+                                                <p>I'm a Cybersecurity Engineer with a proven record of leading security programs, architecting secure cloud infrastructures on AWS, and automating secure delivery pipelines. I focus on practical security, observability, and resilient architectures.</p>
+                                                <p><strong>Core areas:</strong> Cloud security, DevSecOps, CI/CD, incident response, threat detection, security architecture.</p>
+                                            </div>
+                                            <div class="about__skills">
+                                                <div class="skill-pill">AWS</div>
+                                                <div class="skill-pill">Terraform</div>
+                                                <div class="skill-pill">Kubernetes</div>
+                                                <div class="skill-pill">Jenkins / GitHub Actions</div>
+                                                <div class="skill-pill">SIEM / EDR</div>
+                                                <div class="skill-pill">Python / Bash</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
 
-                    <div class="experience__item">
-                        <h3>Senior DevSecOps Engineer — PharmaServ</h3>
-                        <p class="small">Jan 2022 - Mar 2023 · Canada (Remote)</p>
-                        <ul>
-                            <li>Configured and managed EC2 instances across regions following AWS security best practices.</li>
-                            <li>Instrumented CloudTrail/CloudWatch for alerting and logging; containerized apps and automated pipelines.</li>
-                        </ul>
-                    </div>
+                                <!-- EXPERIENCE (kept from previous content) -->
+                                <section id="experience" class="section">
+                                    <div class="container">
+                                        <h2 class="section-title">Experience</h2>
+                                        <div class="timeline">
+                                            <article class="timeline__item">
+                                                <h3>Datalixe — Chief Technology Officer</h3>
+                                                <p class="meta">Sep 2023 — Present · United States</p>
+                                                <p>Identify emerging technologies and market trends; lead digital transformation and scale high-performing technical teams across cybersecurity, AI/analytics, DevOps.</p>
+                                            </article>
+                                            <article class="timeline__item">
+                                                <h3>MAP Systems, Inc — DevSecOps Engineer</h3>
+                                                <p class="meta">Jan 2025 — Dec 2025 · Canada</p>
+                                                <p>Built CI/CD pipelines, managed AWS infrastructure with strong security controls, and documented network/security architecture.</p>
+                                            </article>
+                                            <article class="timeline__item">
+                                                <h3>ASH NELSON PARTNERS — Lead Cyber Security Engineer</h3>
+                                                <p class="meta">Mar 2023 — Dec 2024 · Nigeria (Hybrid)</p>
+                                                <p>Deployed and optimized security platforms (Appgate, Akamai, Darktrace) and created security design docs and workflows.</p>
+                                            </article>
+                                            <article class="timeline__item">
+                                                <h3>PharmaServ — Senior DevSecOps Engineer</h3>
+                                                <p class="meta">Jan 2022 — Mar 2023 · Remote</p>
+                                                <p>Managed EC2 fleets, instrumented CloudTrail/CloudWatch alerting, and containerized applications with secure CI/CD.</p>
+                                            </article>
+                                            <article class="timeline__item">
+                                                <h3>CyberSOC Africa — Cyber Security Analyst</h3>
+                                                <p class="meta">Feb 2022 — Feb 2023</p>
+                                                <p>Operated security monitoring, produced intelligence reports, and maintained SOC tooling including QRadar and AlienVault.</p>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </section>
 
-                    <div class="experience__item">
-                        <h3>Cyber Security Analyst — CyberSOC Africa</h3>
-                        <p class="small">Feb 2022 - Feb 2023</p>
-                        <ul>
-                            <li>Operated security monitoring and alerting, conducted cyber intelligence research and reporting.</li>
-                            <li>Worked with tools such as QRadar, SentinelOne, AlienVault, and MDATP.</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
+                                <!-- PROJECTS -->
+                                <section id="projects" class="section">
+                                    <div class="container">
+                                        <h2 class="section-title">Projects</h2>
+                                        <div class="projects-grid">
+                                            <div class="project-card">
+                                                <img src="assets/img/work1.jpg" alt="">
+                                                <h4>Secure CI/CD Platform</h4>
+                                                <p>Designed and implemented hardened pipelines, automated secrets management and policy checks.</p>
+                                            </div>
+                                            <div class="project-card">
+                                                <img src="assets/img/work2.jpg" alt="">
+                                                <h4>Cloud Infrastructure Hardening</h4>
+                                                <p>Migrated services to AWS with IaC, strict IAM, VPC segmentation and monitoring.</p>
+                                            </div>
+                                            <div class="project-card">
+                                                <img src="assets/img/work3.jpg" alt="">
+                                                <h4>Security Operations Playbooks</h4>
+                                                <p>Built SOC runbooks, alert triage processes, and detection logic for common threats.</p>
+                                            </div>
+                                            <div class="project-card">
+                                                <img src="assets/img/work4.jpg" alt="">
+                                                <h4>Container Security Automation</h4>
+                                                <p>Implemented image scanning, runtime protection and deployment guardrails.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
 
-            <!--===== SKILLS =====-->
-            <section class="skills section" id="skills">
-                <h2 class="section-title">Skills</h2>
-
-                <div class="skills__container bd-grid">          
-                    <div>
-                        <h2 class="skills__subtitle">Professional Skills</h2>
-                        <p class="skills__text">Selected expertise across cloud, security, and DevSecOps practices.</p>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-html5 skills__icon'></i>
-                                <span class="skills__name">Cloud Security</span>
-                            </div>
-                            <div class="skills__bar skills__html">
-
-                            </div>
-                            <div>
-                                <span class="skills__percentage">95%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-css3 skills__icon'></i>
-                                <span class="skills__name">DevSecOps</span>
-                            </div>
-                            <div class="skills__bar skills__css">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">90%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-javascript skills__icon' ></i>
-                                <span class="skills__name">Threat Detection</span>
-                            </div>
-                            <div class="skills__bar skills__js">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxs-paint skills__icon'></i>
-                                <span class="skills__name">Automation & CI/CD</span>
-                            </div>
-                            <div class="skills__bar skills__ux">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">90%</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div>              
-                        <img src="assets/img/work3.jpg" alt="" class="skills__img">
-                    </div>
-                </div>
-            </section>
-
-            <!--===== WORK =====-->
-            <section class="work section" id="work">
-                <h2 class="section-title">Work</h2>
-
-                <div class="work__container bd-grid">
-                    <a href="" class="work__img">
-                        <img src="assets/img/work1.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work2.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work3.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work4.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work5.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work6.jpg" alt="">
-                    </a>
-                </div>
-            </section>
-
-            <!--===== CONTACT =====-->
-            <section class="contact section" id="contact">
-                <h2 class="section-title">Contact</h2>
-
-                <div class="contact__container bd-grid">
-                    <form action="" class="contact__form">
-                        <input type="text" placeholder="Name" class="contact__input">
-                        <input type="mail" placeholder="Email" class="contact__input">
-                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                        <input type="button" value="Enviar" class="contact__button button">
-                    </form>
-                </div>
-            </section>
-        </main>
-
-        <!--===== FOOTER =====-->
-        <footer class="footer">
-            <p class="footer__title">Halimat Aminu</p>
+                                <!-- CONTACT -->
+                                <section id="contact" class="section contact-section">
+                                    <div class="container">
+                                        <h2 class="section-title">Contact</h2>
+                                        <div class="contact-grid">
+                                            <form class="contact__form">
+                                                <input type="text" placeholder="Name" class="contact__input" required>
+                                                <input type="email" placeholder="Email" class="contact__input" required>
+                                                <textarea placeholder="Message" class="contact__input" rows="6" required></textarea>
+                                                <button type="button" class="contact__button button">Send message</button>
+                                            </form>
+                                            <aside class="contact__info">
+                                                <h3>Let's work together</h3>
+                                                <p>Available for consulting and senior engineering roles. Reach me at <a href="mailto:aminuhalimat.o@gmail.com">aminuhalimat.o@gmail.com</a> or on <a href="https://www.linkedin.com/in/halimat-aminu-40596719a/" target="_blank">LinkedIn</a>.</p>
+                                            </aside>
+                                        </div>
+                                    </div>
+                                </section>
+                            </main>
             <div class="footer__social">
                     <a href="https://www.linkedin.com/in/halimat-aminu-40596719a/" target="_blank" class="footer__icon" aria-label="LinkedIn"><i class='bx bxl-linkedin' ></i></a>
                 <a href="mailto:aminuhalimat.o@gmail.com" class="footer__icon" aria-label="Email"><i class='bx bx-envelope' ></i></a>

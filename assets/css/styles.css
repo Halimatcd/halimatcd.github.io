@@ -1,3 +1,97 @@
+/* Modernized portfolio stylesheet for Halimat Aminu */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+:root{
+  --bg:#fbfdff;
+  --surface:#ffffff;
+  --muted:#6b7280;
+  --accent-h:224;
+  --accent: hsl(var(--accent-h) 89% 58%);
+  --accent-2: hsl(var(--accent-h) 80% 50%);
+  --glass: rgba(255,255,255,0.6);
+  --header-h:64px;
+  --max-w:1100px;
+  --radius:10px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;color:#0f1724;background:linear-gradient(180deg,#f8fafc,#eef2f7);-webkit-font-smoothing:antialiased}
+
+.container{max-width:var(--max-w);margin:0 auto;padding:0 1rem}
+
+/* header */
+.l-header{position:fixed;inset:0 0 auto 0;height:var(--header-h);display:flex;align-items:center;backdrop-filter:blur(6px);z-index:60}
+.nav{width:100%;display:flex;align-items:center;justify-content:space-between;padding:0 1rem}
+.nav__logo{font-weight:700;color:#0f1724}
+.nav__list{display:flex;gap:.5rem;align-items:center;margin:0}
+.nav__list li{list-style:none}
+.nav__link{padding:.45rem .6rem;border-radius:8px;color:var(--muted);text-decoration:none;font-weight:600}
+.nav__link.active-link,.nav__link:hover{color:var(--accent);background:var(--glass)}
+.nav__actions{display:flex;gap:.5rem;align-items:center}
+.icon-btn{background:transparent;border:1px solid rgba(15,23,42,0.06);padding:.45rem;border-radius:8px;cursor:pointer}
+
+/* hero */
+.hero{padding:6.5rem 0 3rem}
+.hero__inner{display:grid;grid-template-columns:1fr 380px;gap:2rem;align-items:center}
+.hero__title{font-size:clamp(2rem,4.5vw,3.25rem);margin:0}
+.accent{background:linear-gradient(90deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero__subtitle{color:var(--muted);margin:.5rem 0}
+.hero__lead{color:#334155;margin-top:1rem;line-height:1.6}
+.hero__ctas{display:flex;gap:1rem;margin-top:1.2rem}
+.button{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;padding:.7rem 1.25rem;border-radius:10px;text-decoration:none;font-weight:700}
+.button--ghost{background:transparent;border:1px solid rgba(15,23,42,0.06);color:#0f1724}
+.portrait img{width:100%;max-width:300px;border-radius:14px;box-shadow:0 20px 50px rgba(2,6,23,0.06)}
+
+/* About */
+.section{padding:2.5rem 0}
+.section-title{font-size:1.25rem;margin:0 0 1rem;text-align:center;color:var(--accent)}
+.about__grid{display:grid;grid-template-columns:1fr 320px;gap:1.5rem;align-items:start}
+.about__skills{display:flex;flex-wrap:wrap;gap:.5rem}
+.skill-pill{background:var(--surface);padding:.45rem .75rem;border-radius:999px;border:1px solid rgba(15,23,42,0.04);color:#0f1724;font-weight:600}
+
+/* timeline */
+.timeline{display:grid;gap:1rem}
+.timeline__item{background:var(--surface);padding:1rem;border-radius:10px;box-shadow:0 10px 30px rgba(2,6,23,0.04)}
+.timeline__item h3{margin:.15rem 0}
+.timeline__item .meta{color:var(--muted);font-size:.95rem}
+
+/* projects */
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.project-card{background:var(--surface);border-radius:10px;overflow:hidden;box-shadow:0 20px 50px rgba(2,6,23,0.06)}
+.project-card img{width:100%;height:150px;object-fit:cover}
+.project-card h4{margin:0;padding:.6rem .8rem 0}
+.project-card p{padding:.3rem .8rem 1rem;color:var(--muted)}
+
+/* contact */
+.contact-section .contact-grid{display:grid;grid-template-columns:1fr 320px;gap:1rem;align-items:start}
+.contact__form .contact__input{width:100%;padding:.8rem;border-radius:10px;border:1px solid rgba(15,23,42,0.06);margin-bottom:.75rem}
+.contact__button{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;padding:.6rem 1rem;border-radius:10px;border:none}
+.contact__info{background:var(--surface);padding:1rem;border-radius:10px;box-shadow:0 10px 30px rgba(2,6,23,0.04)}
+
+/* footer */
+.footer{padding:3rem 0;text-align:center}
+.footer__copy{color:var(--muted)}
+
+/* responsive */
+@media (max-width:900px){.hero__inner{grid-template-columns:1fr}.about__grid{grid-template-columns:1fr}.contact-section .contact-grid{grid-template-columns:1fr}.nav__list{display:none}.nav__list.show{display:flex;position:fixed;inset:64px 16px 16px 16px;background:var(--surface);flex-direction:column;padding:1rem;border-radius:12px;box-shadow:0 30px 80px rgba(2,6,23,0.08)}}
+@media (max-width:480px){.portrait img{max-width:220px}}
+
+/* dark theme */
+.dark-theme{background:#071024;color:#dbeafe}
+.dark-theme .container{background:none}
+.dark-theme .nav__link{color:#cbd5e1}
+.dark-theme .nav__link.active-link{background:rgba(255,255,255,0.04)}
+.dark-theme .section-title{color:#7dd3fc}
+.dark-theme .project-card,.dark-theme .timeline__item,.dark-theme .contact__info{background:#071b2b}
+
+/* small helpers */
+.muted{color:var(--muted)}
+
+/* keep small legacy classes that other files reference */
+.bd-grid{max-width:var(--max-w);margin:0 auto}
+
+/* end stylesheet */
 /*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 /*===== VARIABLES CSS =====*/
