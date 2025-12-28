@@ -32,12 +32,14 @@ const scrollActive = () =>{
               sectionTop = current.offsetTop - 58,
               sectionId = current.getAttribute('id'),
               sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
-        
-        if(scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight){
-            sectionsClass.classList.add('active-link')
-        }else{
-            sectionsClass.classList.remove('active-link')
-        }                                                    
+
+        if(sectionId && sectionsClass){
+            if(scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight){
+                sectionsClass.classList.add('active-link')
+            }else{
+                sectionsClass.classList.remove('active-link')
+            }
+        }
     })
 }
 window.addEventListener('scroll', scrollActive)
@@ -55,3 +57,23 @@ sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{});
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
 sr.reveal('.home__social-icon',{ interval: 200}); 
 sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
+
+/* ===== Footer year (dynamic) ===== */
+const footerYear = document.getElementById('footer-year');
+if(footerYear) footerYear.textContent = new Date().getFullYear();
+
+/* ===== Contact form handler (mailto) ===== */
+const contactBtn = document.querySelector('.contact__button');
+if(contactBtn){
+    contactBtn.addEventListener('click', ()=>{
+        const form = document.querySelector('.contact__form');
+        if(!form) return;
+        const name = form.querySelector('input[type="text"]')?.value || '';
+        const email = form.querySelector('input[type="mail"]')?.value || '';
+        const message = form.querySelector('textarea')?.value || '';
+        const to = 'aminuhalimat.o@gmail.com';
+        const subject = encodeURIComponent('Website contact from ' + (name || email));
+        const body = encodeURIComponent(message + "\n\nFrom: " + name + " <" + email + ">");
+        window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+    })
+}

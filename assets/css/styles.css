@@ -139,7 +139,7 @@ img {
 }
 .nav__link {
   position: relative;
-  color: #fff;
+  color: var(--second-color);
 }
 .nav__link:hover {
   position: relative;
@@ -387,6 +387,9 @@ img {
   }
   .home__social-icon {
     margin-bottom: 0;
+.nav__menu .nav__link {
+  color: #fff;
+}
     margin-right: var(--mb-4);
   }
   .home__img {
