@@ -4,10 +4,10 @@
 /* ===== VARIABLES ===== */
 :root {
   /* Cybersecurity Color Scheme */
-  --primary-color: #00d4ff;
-  --primary-color-alt: #00a8cc;
+  --primary-color: #30f907;
+  --primary-color-alt: #27c205;
   --secondary-color: #9d4edd;
-  --dark-color: #0a0e17;
+  --dark-color: #000059;
   --dark-color-alt: #13182a;
   --light-color: #f8f9fa;
   --gray-color: #6c757d;
@@ -413,12 +413,7 @@ img {
 }
 
 .home__security-animation {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;
-  height: 300px;
+  display: none; /* removed per design request */
 }
 
 .shield {
@@ -561,14 +556,15 @@ img {
 }
 
 .tech-icon {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   background: var(--dark-color-alt);
   border-radius: var(--border-radius);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 2.4rem;
+  font-size: 3rem;
   transition: var(--transition);
   cursor: pointer;
   position: relative;
@@ -581,6 +577,13 @@ img {
   color: var(--dark-color);
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 212, 255, 0.3);
+}
+
+.tech-icon .tech-level {
+  display: block;
+  font-size: 0.75rem;
+  color: rgba(248,249,250,0.8);
+  margin-top: 0.5rem;
 }
 
 .tech-icon::after {
@@ -610,51 +613,51 @@ img {
 
 /* ===== EXPERIENCE ===== */
 .experience__container {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .experience__timeline {
-  position: relative;
-  padding-left: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding-left: 0;
 }
 
 .experience__timeline::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: linear-gradient(to bottom, var(--primary-color), transparent);
+  display: none;
 }
 
 .experience__item {
   position: relative;
-  margin-bottom: 3rem;
-  padding-left: 30px;
+  margin-bottom: 0;
+  padding: 1rem;
+  background: var(--dark-color-alt);
+  border-radius: var(--border-radius);
+  border: 1px solid rgba(255,255,255,0.02);
 }
 
 .experience__header {
   display: flex;
   align-items: center;
-  margin-bottom: 1rem;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .experience__icon {
-  position: absolute;
-  left: -15px;
-  width: 40px;
-  height: 40px;
+  position: static;
+  left: auto;
+  width: 48px;
+  height: 48px;
   background: var(--primary-color);
   color: var(--dark-color);
-  border-radius: 50%;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.25rem;
   z-index: 1;
-  border: 3px solid var(--dark-color);
+  border: none;
 }
 
 .experience__date {
@@ -679,8 +682,8 @@ img {
 }
 
 .experience__logo {
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   background: var(--dark-color);
   border-radius: 50%;
   display: flex;
@@ -983,15 +986,15 @@ img {
 }
 
 .certification__icon {
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: var(--primary-color);
   margin-bottom: 1rem;
-  width: 80px;
-  height: 80px;
+  width: 96px;
+  height: 96px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 212, 255, 0.1);
+  background: rgba(48, 249, 7, 0.08);
   border-radius: 50%;
   margin-bottom: 1.5rem;
 }
@@ -1084,6 +1087,12 @@ img {
   padding: 2rem;
   border-radius: var(--border-radius);
   border: 1px solid rgba(0, 212, 255, 0.1);
+}
+
+.contact__note {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: rgba(248,249,250,0.8);
 }
 
 .contact__inputs {
@@ -1472,9 +1481,9 @@ img {
   }
   
   .tech-icon {
-    width: 60px;
-    height: 60px;
-    font-size: 1.75rem;
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
   }
   
   .projects__container {
@@ -1543,8 +1552,8 @@ img {
   }
   
   .tech-icon {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     font-size: 1.5rem;
   }
   
