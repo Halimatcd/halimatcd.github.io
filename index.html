@@ -1,16 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halimat Aminu | Cybersecurity Engineer & CTO</title>
-    <!-- Chart.js for Skills Radar Chart -->
-    
     
     <!-- Meta tags for SEO and professionalism -->
     <meta name="description" content="Halimat Aminu - Cybersecurity Engineer, DevSecOps Specialist & Chief Technology Officer. Building secure digital futures through innovative security solutions.">
-    <meta name="keywords" content="Cybersecurity, DevSecOps, Cloud Security, CTO, Infrastructure Security, AWS, CI/CD">
+    <meta name="keywords" content="Cybersecurity, DevSecOps, Cloud Security, CTO, Infrastructure Security, AWS, CI/CD, Threat Intelligence, Zero Trust">
     <meta name="author" content="Halimat Aminu">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Halimat Aminu | Cybersecurity Engineer & CTO">
+    <meta property="og:description" content="Cybersecurity Engineer, DevSecOps Specialist & Chief Technology Officer building secure digital futures.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://halimataminu.com">
+    <meta property="og:image" content="https://halimataminu.com/assets/img/Hal2p.png">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Halimat Aminu | Cybersecurity Engineer & CTO">
+    <meta name="twitter:description" content="Cybersecurity Engineer, DevSecOps Specialist & Chief Technology Officer building secure digital futures.">
+    <meta name="twitter:image" content="https://halimataminu.com/assets/img/Hal2p.png">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
@@ -25,7 +36,9 @@
     
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Chart.js for Skills Radar Chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" crossorigin="anonymous" defer></script>
 </head>
 <body>
     <!-- Header & Navigation -->
@@ -69,8 +82,8 @@
 
             <!-- Theme toggle and menu toggle -->
             <div class="nav__buttons">
-                <i class='bx bx-moon change-theme' id="theme-button"></i>
-                <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-moon change-theme' id="theme-button" aria-label="Toggle dark/light mode"></i>
+                <div class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation menu">
                     <i class='bx bx-menu'></i>
                 </div>
             </div>
@@ -81,6 +94,7 @@
     <main class="main">
         <!-- Home Section -->
         <section class="home section" id="home">
+            <div class="home__overlay"></div>
             <div class="home__container container grid">
                 <div class="home__data">
                     <h1 class="home__title">
@@ -125,10 +139,11 @@
 
                 <div class="home__image">
                     <div class="home__blob">
-                        <img src="assets/img/Hal2p.png" alt="Halimat Aminu" class="home__blob-img" />
+                        <svg viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                        </svg>
+                        <img src="assets/img/Hal2p.png" alt="Halimat Aminu - Cybersecurity Engineer & CTO" class="home__blob-img" />
                     </div>
-                    
-                    <!-- security animation removed per design request -->
                 </div>
             </div>
             
@@ -157,21 +172,21 @@
                     
                     <div class="about__details">
                         <div class="about__detail">
-                            <i class='bx bxs-shield-plus'></i>
+                            <i class='bx bxs-shield-plus' aria-hidden="true"></i>
                             <div>
                                 <h3>Security First</h3>
                                 <p>Implementing security at every layer of the stack</p>
                             </div>
                         </div>
                         <div class="about__detail">
-                            <i class='bx bxs-cloud'></i>
+                            <i class='bx bxs-cloud' aria-hidden="true"></i>
                             <div>
                                 <h3>Cloud Native</h3>
                                 <p>Expert in AWS, Azure, and Google Cloud (GCP) security</p>
                             </div>
                         </div>
                         <div class="about__detail">
-                            <i class='bx bxs-network-chart'></i>
+                            <i class='bx bxs-network-chart' aria-hidden="true"></i>
                             <div>
                                 <h3>Infrastructure as Code</h3>
                                 <p>Automating security through Infrastructure as Code</p>
@@ -179,40 +194,40 @@
                         </div>
                     </div>
                     
-                    <a href="https://drive.google.com/file/d/1y6mBg-bSvxT-eyzWP0PVgOjHLEOH67WL/view?usp=sharing" class="button" target="_blank" rel="noopener">
+                    <a href="https://drive.google.com/file/d/1y6mBg-bSvxT-eyzWP0PVgOjHLEOH67WL/view?usp=sharing" class="button" target="_blank" rel="noopener noreferrer">
                         <i class='bx bx-download'></i>
                         View Resume
                     </a>
                 </div>
                 
                 <div class="about__image">
-                    <div class="about__blob">
+                    <div class="about__blob" aria-hidden="true">
                         <svg viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg">
                             <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
                         </svg>
                     </div>
                     <div class="about__tech-stack">
-                        <div class="tech-icon" data-tooltip="AWS">
+                        <div class="tech-icon" data-tooltip="AWS" tabindex="0" role="button" aria-label="AWS Expert">
                             <i class='bx bxl-aws'></i>
                             <span class="tech-level">Expert</span>
                         </div>
-                        <div class="tech-icon" data-tooltip="Docker">
+                        <div class="tech-icon" data-tooltip="Docker" tabindex="0" role="button" aria-label="Docker Expert">
                             <i class='bx bxl-docker'></i>
                             <span class="tech-level">Expert</span>
                         </div>
-                        <div class="tech-icon" data-tooltip="Kubernetes">
+                        <div class="tech-icon" data-tooltip="Kubernetes" tabindex="0" role="button" aria-label="Kubernetes Expert">
                             <i class='bx bxl-kubernetes'></i>
                             <span class="tech-level">Expert</span>
                         </div>
-                        <div class="tech-icon" data-tooltip="Python">
+                        <div class="tech-icon" data-tooltip="Python" tabindex="0" role="button" aria-label="Python Expert">
                             <i class='bx bxl-python'></i>
                             <span class="tech-level">Expert</span>
                         </div>
-                        <div class="tech-icon" data-tooltip="Google Cloud">
+                        <div class="tech-icon" data-tooltip="Google Cloud" tabindex="0" role="button" aria-label="Google Cloud Expert">
                             <i class='bx bxl-google'></i>
                             <span class="tech-level">Expert</span>
                         </div>
-                        <div class="tech-icon" data-tooltip="Terraform">
+                        <div class="tech-icon" data-tooltip="Terraform" tabindex="0" role="button" aria-label="Terraform Expert">
                             <i class='bx bxl-terraform'></i>
                             <span class="tech-level">Expert</span>
                         </div>
@@ -223,149 +238,150 @@
 
         <!-- Experience Section -->
         <section class="experience section" id="experience">
-            <h2 class="section__title">Professional <span>Services</span></h2>
-            
-            <div class="experience__container container grid">
-                <div class="experience__timeline">
-                    <!-- CTO Experience -->
-                    <div class="experience__item">
-                        <div class="experience__header">
-                            <div class="experience__icon">
-                                <i class='bx bxs-briefcase-alt-2'></i>
+            <div class="experience__background"></div>
+            <div class="container">
+                <h2 class="section__title">Professional <span>Experience</span></h2>
+                
+                <div class="experience__container grid">
+                    <div class="experience__timeline">
+                        <!-- CTO Experience -->
+                        <div class="experience__item">
+                            <div class="experience__header">
+                                <div class="experience__icon">
+                                    <i class='bx bxs-briefcase-alt-2'></i>
+                                </div>
+                                <div class="experience__date">Sep 2023 - Present</div>
                             </div>
-                            <div class="experience__date">Sep 2023 - Present</div>
-                        </div>
-                        
-                        <div class="experience__content">
-                            <div class="experience__company">
-                                <div class="experience__logo">DT</div>
-                                <div>
-                                    <h3 class="experience__title">Chief Technology Officer</h3>
-                                    <p class="experience__company-name">Datalixe · United States</p>
+                            
+                            <div class="experience__content">
+                                <div class="experience__company">
+                                    <div class="experience__logo">DT</div>
+                                    <div>
+                                        <h3 class="experience__title">Chief Technology Officer</h3>
+                                        <p class="experience__company-name">Datalixe · United States</p>
+                                    </div>
+                                </div>
+                                
+                                <ul class="experience__details">
+                                    <li>
+                                        <i class='bx bx-check'></i>
+                                        Identify emerging technologies and market trends in cybersecurity, DevOps, AI, and analytics
+                                    </li>
+                                    <li>
+                                        <i class='bx bx-check'></i>
+                                        Lead digital transformation initiatives for clients and internal operations
+                                    </li>
+                                    <li>
+                                        <i class='bx bx-check'></i>
+                                        Collaborate with business leaders, investors, and partners to align tech initiatives
+                                    </li>
+                                    <li>
+                                        <i class='bx bx-check'></i>
+                                        Build, mentor, and scale high-performing technical teams
+                                    </li>
+                                </ul>
+                                
+                                <div class="experience__skills">
+                                    <span class="skill-tag">Project Management</span>
+                                    <span class="skill-tag">Team Leadership</span>
+                                    <span class="skill-tag">Digital Transformation</span>
+                                    <span class="skill-tag">Strategic Planning</span>
                                 </div>
                             </div>
+                        </div>
+
+                        <!-- DevSecOps Engineer Experience -->
+                        <div class="experience__item">
+                            <div class="experience__header">
+                                <div class="experience__icon">
+                                    <i class='bx bxs-briefcase-alt-2'></i>
+                                </div>
+                                <div class="experience__date">Jan 2025 - Dec 2025</div>
+                            </div>
                             
-                            <ul class="experience__details">
-                                <li>
-                                    <i class='bx bx-check'></i>
-                                    Identify emerging technologies and market trends in cybersecurity, DevOps, AI, and analytics
-                                </li>
-                                <li>
-                                    <i class='bx bx-check'></i>
-                                    Lead digital transformation initiatives for clients and internal operations
-                                </li>
-                                <li>
-                                    <i class='bx bx-check'></i>
-                                    Collaborate with business leaders, investors, and partners to align tech initiatives
-                                </li>
-                                <li>
-                                    <i class='bx bx-check'></i>
-                                    Build, mentor, and scale high-performing technical teams
-                                </li>
-                            </ul>
+                            <div class="experience__content">
+                                <div class="experience__company">
+                                    <div class="experience__logo">MS</div>
+                                    <div>
+                                        <h3 class="experience__title">DevSecOps Engineer</h3>
+                                        <p class="experience__company-name">MAP Systems, Inc · Contract · Canada</p>
+                                    </div>
+                                </div>
+                                
+                                <ul class="experience__details">
+                                    <li>
+                                        <i class='bx bx-check'></i>
+                                        Developed and maintained CI/CD pipelines using Jenkins, Github CI/CD, AWS CodePipeline
+                                    </li>
+                                    <li>
+                                        <i class='bx bx-check'></i>
+                                        Investigated and resolved issues across Linux servers, macOS build agents, Docker containers
+                                    </li>
+                                    <li>
+                                        <i class='bx bx-check'></i>
+                                        Designed, deployed, and managed secure, scalable cloud infrastructure on AWS
+                                    </li>
+                                    <li>
+                                        <i class='bx bx-check'></i>
+                                        Implemented security measures including IAM policies, encryption, VPC configurations
+                                    </li>
+                                </ul>
+                                
+                                <div class="experience__skills">
+                                    <span class="skill-tag">CI/CD</span>
+                                    <span class="skill-tag">AWS</span>
+                                    <span class="skill-tag">Docker</span>
+                                    <span class="skill-tag">Security Hardening</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Lead Cybersecurity Engineer Experience -->
+                        <div class="experience__item">
+                            <div class="experience__header">
+                                <div class="experience__icon">
+                                    <i class='bx bxs-briefcase-alt-2'></i>
+                                </div>
+                                <div class="experience__date">Mar 2023 - Dec 2024</div>
+                            </div>
                             
-                            <div class="experience__skills">
-                                <span class="skill-tag">Project Management</span>
-                                <span class="skill-tag">Team Leadership</span>
-                                <span class="skill-tag">Digital Transformation</span>
-                                <span class="skill-tag">Strategic Planning</span>
+                            <div class="experience__content">
+                                <div class="experience__company">
+                                    <div class="experience__logo">AN</div>
+                                    <div>
+                                        <h3 class="experience__title">Lead Cyber Security Engineer</h3>
+                                        <p class="experience__company-name">ASH NELSON PARTNERS · Nigeria · Hybrid</p>
+                                    </div>
+                                </div>
+                                
+                                <ul class="experience__details">
+                                    <li>
+                                        <i class='bx bx-check'></i>
+                                        Orchestrated deployment of cybersecurity solutions (Appgate, Akamai, Darktrace)
+                                    </li>
+                                    <li>
+                                        <i class='bx bx-check'></i>
+                                        Primary point of contact for security-related inquiries
+                                    </li>
+                                    <li>
+                                        <i class='bx bx-check'></i>
+                                        Created security design documentation and intricate flow diagrams
+                                    </li>
+                                    <li>
+                                        <i class='bx bx-check'></i>
+                                        Implemented advanced fraud management tools (ARIC, CFRM)
+                                    </li>
+                                </ul>
+                                
+                                <div class="experience__skills">
+                                    <span class="skill-tag">Cybersecurity</span>
+                                    <span class="skill-tag">Cloud Security</span>
+                                    <span class="skill-tag">Network Security</span>
+                                    <span class="skill-tag">Fraud Detection</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <!-- DevSecOps Engineer Experience -->
-                    <div class="experience__item">
-                        <div class="experience__header">
-                            <div class="experience__icon">
-                                <i class='bx bxs-briefcase-alt-2'></i>
-                            </div>
-                            <div class="experience__date">Jan 2025 - Dec 2025</div>
-                        </div>
-                        
-                        <div class="experience__content">
-                            <div class="experience__company">
-                                <div class="experience__logo">MS</div>
-                                <div>
-                                    <h3 class="experience__title">DevSecOps Engineer</h3>
-                                    <p class="experience__company-name">MAP Systems, Inc · Contract · Canada</p>
-                                </div>
-                            </div>
-                            
-                            <ul class="experience__details">
-                                <li>
-                                    <i class='bx bx-check'></i>
-                                    Developed and maintained CI/CD pipelines using Jenkins, Github CI/CD, AWS CodePipeline
-                                </li>
-                                <li>
-                                    <i class='bx bx-check'></i>
-                                    Investigated and resolved issues across Linux servers, macOS build agents, Docker containers
-                                </li>
-                                <li>
-                                    <i class='bx bx-check'></i>
-                                    Designed, deployed, and managed secure, scalable cloud infrastructure on AWS
-                                </li>
-                                <li>
-                                    <i class='bx bx-check'></i>
-                                    Implemented security measures including IAM policies, encryption, VPC configurations
-                                </li>
-                            </ul>
-                            
-                            <div class="experience__skills">
-                                <span class="skill-tag">CI/CD</span>
-                                <span class="skill-tag">AWS</span>
-                                <span class="skill-tag">Docker</span>
-                                <span class="skill-tag">Security Hardening</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Lead Cybersecurity Engineer Experience -->
-                    <div class="experience__item">
-                        <div class="experience__header">
-                            <div class="experience__icon">
-                                <i class='bx bxs-briefcase-alt-2'></i>
-                            </div>
-                            <div class="experience__date">Mar 2023 - Dec 2024</div>
-                        </div>
-                        
-                        <div class="experience__content">
-                            <div class="experience__company">
-                                <div class="experience__logo">AN</div>
-                                <div>
-                                    <h3 class="experience__title">Lead Cyber Security Engineer</h3>
-                                    <p class="experience__company-name">ASH NELSON PARTNERS · Nigeria · Hybrid</p>
-                                </div>
-                            </div>
-                            
-                            <ul class="experience__details">
-                                <li>
-                                    <i class='bx bx-check'></i>
-                                    Orchestrated deployment of cybersecurity solutions (Appgate, Akamai, Darktrace)
-                                </li>
-                                <li>
-                                    <i class='bx bx-check'></i>
-                                    Primary point of contact for security-related inquiries
-                                </li>
-                                <li>
-                                    <i class='bx bx-check'></i>
-                                    Created security design documentation and intricate flow diagrams
-                                </li>
-                                <li>
-                                    <i class='bx bx-check'></i>
-                                    Implemented advanced fraud management tools (ARIC, CFRM)
-                                </li>
-                            </ul>
-                            
-                            <div class="experience__skills">
-                                <span class="skill-tag">Cybersecurity</span>
-                                <span class="skill-tag">Cloud Security</span>
-                                <span class="skill-tag">Network Security</span>
-                                <span class="skill-tag">Fraud Detection</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Previous experiences would continue here -->
                 </div>
             </div>
         </section>
@@ -376,9 +392,9 @@
             
             <div class="projects__container container grid">
                 <!-- Project 1 -->
-                <div class="project__card">
+                <article class="project__card">
                     <div class="project__image">
-                        <img src="assets/img/Sec_cloud2.jpg" alt="Secure Cloud Infrastructure Migration">
+                        <img src="assets/img/Sec_cloud2.jpg" alt="Secure Cloud Infrastructure Migration architecture">
                         <div class="project__overlay">
                             <span class="project__tag">AWS Security</span>
                             <span class="project__tag">DevSecOps</span>
@@ -399,17 +415,17 @@
                             <span>Python</span>
                         </div>
                         
-                        <a href="#" class="project__link">
+                        <a href="projects.html#case-study-1" class="project__link">
                             View Case Study
                             <i class='bx bx-right-arrow-alt'></i>
                         </a>
                     </div>
-                </div>
+                </article>
 
                 <!-- Project 2 -->
-                <div class="project__card">
+                <article class="project__card">
                     <div class="project__image">
-                        <img src="assets/img/devsec_pipeline2.jpg" alt="Automated DevSecOps Pipeline">
+                        <img src="assets/img/devsec_pipeline2.jpg" alt="Automated DevSecOps CI/CD pipeline">
                         <div class="project__overlay">
                             <span class="project__tag">CI/CD</span>
                             <span class="project__tag">Automation</span>
@@ -430,17 +446,17 @@
                             <span>GitHub Actions</span>
                         </div>
                         
-                        <a href="#" class="project__link">
+                        <a href="projects.html#case-study-2" class="project__link">
                             View Case Study
                             <i class='bx bx-right-arrow-alt'></i>
                         </a>
                     </div>
-                </div>
+                </article>
 
                 <!-- Project 3 -->
-                <div class="project__card">
+                <article class="project__card">
                     <div class="project__image">
-                        <img src="assets/img/zero_trust.jpg" alt="Zero Trust Network Implementation">
+                        <img src="assets/img/zero_trust.jpg" alt="Zero Trust Network Implementation architecture">
                         <div class="project__overlay">
                             <span class="project__tag">Zero Trust</span>
                             <span class="project__tag">Network Security</span>
@@ -461,12 +477,12 @@
                             <span>Python</span>
                         </div>
                         
-                        <a href="#" class="project__link">
+                        <a href="projects.html#case-study-3" class="project__link">
                             View Case Study
                             <i class='bx bx-right-arrow-alt'></i>
                         </a>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
 
@@ -477,7 +493,7 @@
             <div class="skills__container container grid">
                 <div class="skills__data">
                     <div class="skills__radar">
-                        <canvas id="skillsRadar"></canvas>
+                        <canvas id="skillsRadar" role="img" aria-label="Skills Radar Chart showing expertise in Cloud Security, DevSecOps, Network Security, Threat Intelligence, Incident Response, and Compliance"></canvas>
                     </div>
                 </div>
                 
@@ -511,25 +527,24 @@
                                 </div>
                                 
                                 <div class="skill__item">
-                                    <div class="skill__item">
-                                        <div class="skill__info">
-                                            <span>Google Cloud Security</span>
-                                            <span>93%</span>
-                                        </div>
-                                        <div class="skill__bar">
-                                            <div class="skill__percentage" style="width: 93%"></div>
-                                        </div>
+                                    <div class="skill__info">
+                                        <span>Google Cloud Security</span>
+                                        <span>93%</span>
                                     </div>
+                                    <div class="skill__bar">
+                                        <div class="skill__percentage" style="width: 93%"></div>
+                                    </div>
+                                </div>
 
-                                    <div class="skill__item">
-                                        <div class="skill__info">
-                                            <span>Container Security</span>
-                                            <span>90%</span>
-                                        </div>
-                                        <div class="skill__bar">
-                                            <div class="skill__percentage" style="width: 90%"></div>
-                                        </div>
+                                <div class="skill__item">
+                                    <div class="skill__info">
+                                        <span>Container Security</span>
+                                        <span>90%</span>
                                     </div>
+                                    <div class="skill__bar">
+                                        <div class="skill__percentage" style="width: 90%"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -620,7 +635,7 @@
             <h2 class="section__title">Professional <span>Certifications</span></h2>
             
                 <div class="certifications__container container grid">
-                    <div class="certification__card">
+                    <div class="certification__card" tabindex="0" role="article">
                         <div class="certification__icon">
                             <i class='bx bxs-award'></i>
                         </div>
@@ -629,7 +644,7 @@
                         <span class="certification__date">2024</span>
                     </div>
 
-                    <div class="certification__card">
+                    <div class="certification__card" tabindex="0" role="article">
                         <div class="certification__icon">
                             <i class='bx bxs-award'></i>
                         </div>
@@ -638,7 +653,7 @@
                         <span class="certification__date">2023</span>
                     </div>
 
-                    <div class="certification__card">
+                    <div class="certification__card" tabindex="0" role="article">
                         <div class="certification__icon">
                             <i class='bx bxs-award'></i>
                         </div>
@@ -647,7 +662,7 @@
                         <span class="certification__date">2025</span>
                     </div>
 
-                    <div class="certification__card">
+                    <div class="certification__card" tabindex="0" role="article">
                         <div class="certification__icon">
                             <i class='bx bxs-award'></i>
                         </div>
@@ -656,7 +671,7 @@
                         <span class="certification__date">2022</span>
                     </div>
 
-                    <div class="certification__card">
+                    <div class="certification__card" tabindex="0" role="article">
                         <div class="certification__icon">
                             <i class='bx bxs-award'></i>
                         </div>
@@ -665,7 +680,7 @@
                         <span class="certification__date">2022</span>
                     </div>
 
-                    <div class="certification__card">
+                    <div class="certification__card" tabindex="0" role="article">
                         <div class="certification__icon">
                             <i class='bx bxs-award'></i>
                         </div>
@@ -674,7 +689,7 @@
                         <span class="certification__date">Issued Feb 2022</span>
                     </div>
 
-                    <div class="certification__card">
+                    <div class="certification__card" tabindex="0" role="article">
                         <div class="certification__icon">
                             <i class='bx bxs-award'></i>
                         </div>
@@ -683,12 +698,12 @@
                         <span class="certification__date">2022</span>
                     </div>
 
-                    <div class="certification__card">
+                    <div class="certification__card" tabindex="0" role="article">
                         <div class="certification__icon">
                             <i class='bx bxs-award'></i>
                         </div>
                         <h3 class="certification__title">DevSecOps</h3>
-                        <p class="certification__issuer">(Practical / Course)</p>
+                        <p class="certification__issuer">Practical Course</p>
                         <span class="certification__date">—</span>
                     </div>
                 </div>
@@ -707,58 +722,52 @@
                     </p>
                     
                     <div class="contact__info">
-                        <div class="contact__detail">
+                        <a href="mailto:aminuhalimat.o@gmail.com" class="contact__detail">
                             <i class='bx bx-envelope'></i>
                             <div>
                                 <span class="contact__detail-title">Email</span>
-                                        <a href="mailto:aminuhalimat.o@gmail.com" class="contact__detail-data">
-                                            aminuhalimat.o@gmail.com
-                                        </a>
+                                <span class="contact__detail-data">aminuhalimat.o@gmail.com</span>
                             </div>
-                        </div>
+                        </a>
                         
-                        <div class="contact__detail">
+                        <a href="https://github.com/Halimatcd" class="contact__detail" target="_blank" rel="noopener noreferrer">
                             <i class='bx bxl-github'></i>
                             <div>
                                 <span class="contact__detail-title">GitHub</span>
-                                <a href="https://github.com/Halimatcd" class="contact__detail-data" target="_blank">
-                                    https://github.com/Halimatcd
-                                </a>
+                                <span class="contact__detail-data">github.com/Halimatcd</span>
                             </div>
-                        </div>
+                        </a>
                         
-                        <div class="contact__detail">
+                        <a href="https://www.linkedin.com/in/halimat-aminu-40596719a/" class="contact__detail" target="_blank" rel="noopener noreferrer">
                             <i class='bx bxl-linkedin'></i>
                             <div>
                                 <span class="contact__detail-title">LinkedIn</span>
-                                <a href="https://www.linkedin.com/in/halimat-aminu-40596719a/" class="contact__detail-data" target="_blank">
-                                    https://www.linkedin.com/in/halimat-aminu-40596719a/
-                                </a>
+                                <span class="contact__detail-data">linkedin.com/in/halimat-aminu</span>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 
-                <form class="contact__form">
+                <form class="contact__form" id="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
                     <div class="contact__inputs">
                         <div class="contact__content">
-                            <input type="text" placeholder=" " class="contact__input" required>
+                            <input type="text" name="name" placeholder=" " class="contact__input" required aria-label="Your Name">
                             <label class="contact__label">Name</label>
                         </div>
                         
                         <div class="contact__content">
-                            <input type="email" placeholder=" " class="contact__input" required>
+                            <input type="email" name="email" placeholder=" " class="contact__input" required aria-label="Your Email">
                             <label class="contact__label">Email</label>
                         </div>
                     </div>
                     
                     <div class="contact__content">
-                        <input type="text" placeholder=" " class="contact__input" required>
+                        <input type="text" name="subject" placeholder=" " class="contact__input" required aria-label="Subject">
                         <label class="contact__label">Subject</label>
                     </div>
                     
                     <div class="contact__content">
-                        <textarea placeholder=" " class="contact__input contact__textarea" required></textarea>
+                        <textarea name="message" placeholder=" " class="contact__input contact__textarea" required aria-label="Your Message"></textarea>
                         <label class="contact__label">Message</label>
                     </div>
                     
@@ -766,7 +775,6 @@
                         <i class='bx bxs-paper-plane'></i>
                         Send Encrypted Message
                     </button>
-
                 </form>
             </div>
         </section>
@@ -786,16 +794,16 @@
                 </p>
                 
                 <div class="footer__social">
-                    <a href="https://github.com/Halimatcd" class="footer__social-link" target="_blank" rel="noopener">
+                    <a href="https://github.com/Halimatcd" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
                         <i class='bx bxl-github'></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/halimat-aminu-40596719a/" class="footer__social-link" target="_blank" rel="noopener">
+                    <a href="https://www.linkedin.com/in/halimat-aminu-40596719a/" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
                         <i class='bx bxl-linkedin'></i>
                     </a>
-                    <a href="https://twitter.com/" class="footer__social-link" target="_blank" rel="noopener">
+                    <a href="https://twitter.com/" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Twitter Profile">
                         <i class='bx bxl-twitter'></i>
                     </a>
-                    <a href="#" class="footer__social-link">
+                    <a href="#" class="footer__social-link" aria-label="Medium Articles">
                         <i class='bx bxl-medium'></i>
                     </a>
                 </div>
@@ -806,7 +814,7 @@
                 <ul class="footer__list">
                     <li><a href="#home" class="footer__link">Home</a></li>
                     <li><a href="#about" class="footer__link">About</a></li>
-                    <li><a href="#experience" class="footer__link">Services</a></li>
+                    <li><a href="#experience" class="footer__link">Experience</a></li>
                     <li><a href="#projects" class="footer__link">Projects</a></li>
                     <li><a href="#contact" class="footer__link">Contact</a></li>
                 </ul>
@@ -815,19 +823,17 @@
             <div class="footer__links">
                 <h3 class="footer__title">Services</h3>
                 <ul class="footer__list">
-                    <li><a href="#" class="footer__link">Security Audits</a></li>
-                    <li><a href="#" class="footer__link">Cloud Security</a></li>
-                    <li><a href="#" class="footer__link">DevSecOps</a></li>
-                    <li><a href="#" class="footer__link">Incident Response</a></li>
+                    <li><a href="#contact" class="footer__link">Security Audits</a></li>
+                    <li><a href="#contact" class="footer__link">Cloud Security</a></li>
+                    <li><a href="#contact" class="footer__link">DevSecOps</a></li>
+                    <li><a href="#contact" class="footer__link">Incident Response</a></li>
                 </ul>
             </div>
-            
-            <!-- Footer newsletter removed per request -->
         </div>
         
         <div class="footer__bottom">
             <p class="footer__copy">
-                &copy; 2024 Halimat Aminu. All rights reserved. | 
+                &copy; <span id="current-year">2024</span> Halimat Aminu. All rights reserved. | 
                 <span class="footer__security">
                     <i class='bx bxs-lock-alt'></i>
                     Securely hosted with HTTPS
@@ -837,12 +843,11 @@
     </footer>
 
     <!-- Scroll Up -->
-    <a href="#" class="scrollup" id="scroll-up">
+    <a href="#" class="scrollup" id="scroll-up" aria-label="Scroll to top">
         <i class='bx bx-up-arrow-alt'></i>
     </a>
 
     <!-- JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>

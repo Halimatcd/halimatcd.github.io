@@ -11,12 +11,14 @@ const scrollUp = document.getElementById('scroll-up');
 if (navToggle) {
     navToggle.addEventListener('click', () => {
         navMenu.classList.add('show-menu');
+        document.body.style.overflow = 'hidden';
     });
 }
 
 if (navClose) {
     navClose.addEventListener('click', () => {
         navMenu.classList.remove('show-menu');
+        document.body.style.overflow = '';
     });
 }
 
@@ -24,6 +26,7 @@ if (navClose) {
 const navLinks = document.querySelectorAll('.nav__link');
 const linkAction = () => {
     navMenu.classList.remove('show-menu');
+    document.body.style.overflow = '';
 };
 navLinks.forEach(link => link.addEventListener('click', linkAction));
 
@@ -31,18 +34,23 @@ navLinks.forEach(link => link.addEventListener('click', linkAction));
 const darkTheme = 'dark-theme';
 const iconTheme = 'bx-sun';
 
-// Previously selected topic (if user selected)
-const selectedTheme = localStorage.getItem('selected-theme');
-const selectedIcon = localStorage.getItem('selected-icon');
+// Check for saved theme preference or use dark theme as default
+const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+const savedTheme = localStorage.getItem('selected-theme');
+const savedIcon = localStorage.getItem('selected-icon');
 
 // Get current theme
 const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light';
 const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'bx-moon' : 'bx-sun';
 
-// Validate if user previously chose a theme
-if (selectedTheme) {
-    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
-    themeButton.classList[selectedIcon === 'bx-moon' ? 'add' : 'remove'](iconTheme);
+// Set initial theme
+if (savedTheme) {
+    document.body.classList[savedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
+    themeButton.classList[savedIcon === 'bx-moon' ? 'add' : 'remove'](iconTheme);
+} else {
+    // Default to dark theme if no preference saved
+    document.body.classList.add(darkTheme);
+    themeButton.classList.remove(iconTheme);
 }
 
 // Toggle theme
@@ -76,7 +84,17 @@ const scrollActive = () => {
         }
     });
 };
-window.addEventListener('scroll', scrollActive);
+
+// Throttle scroll event for performance
+let scrollTimeout;
+window.addEventListener('scroll', () => {
+    if (!scrollTimeout) {
+        scrollTimeout = setTimeout(() => {
+            scrollActive();
+            scrollTimeout = null;
+        }, 100);
+    }
+});
 
 // ===== SHOW SCROLL UP =====
 const scrollUpShow = () => {
@@ -86,6 +104,7 @@ const scrollUpShow = () => {
         scrollUp.classList.remove('show-scroll');
     }
 };
+
 window.addEventListener('scroll', scrollUpShow);
 
 // ===== TYPING ANIMATION =====
@@ -113,7 +132,7 @@ if (typingText) {
             if (!isDeleting) {
                 professionIndex = (professionIndex + 1) % professions.length;
             }
-            typingSpeed = 1200;
+            typingSpeed = isDeleting ? 50 : 1200;
         }
         
         setTimeout(typeEffect, typingSpeed);
@@ -131,31 +150,31 @@ const initSkillsChart = () => {
     
     // Check if Chart.js is loaded
     if (typeof Chart === 'undefined') {
-        console.warn('Chart.js not loaded yet. Retrying...');
-        setTimeout(initSkillsChart, 500);
+        console.warn('Chart.js not loaded. Skills chart disabled.');
         return;
     }
     
     try {
-        const skillsChart = new Chart(ctx, {
+        const skillsChart = new Chart(ctx.getContext('2d'), {
             type: 'radar',
             data: {
                 labels: ['Cloud Security', 'DevSecOps', 'Network Security', 'Threat Intelligence', 'Incident Response', 'Compliance'],
                 datasets: [{
                     label: 'Expertise Level',
                     data: [95, 92, 88, 85, 90, 87],
-                    backgroundColor: 'rgba(0, 212, 255, 0.2)',
-                    borderColor: 'rgba(0, 212, 255, 1)',
+                    backgroundColor: 'rgba(48, 249, 7, 0.2)',
+                    borderColor: 'rgba(48, 249, 7, 1)',
                     borderWidth: 2,
-                    pointBackgroundColor: 'rgba(0, 212, 255, 1)',
+                    pointBackgroundColor: 'rgba(48, 249, 7, 1)',
                     pointBorderColor: '#fff',
                     pointBorderWidth: 2,
-                    pointRadius: 4
+                    pointRadius: 4,
+                    pointHoverRadius: 6
                 }]
             },
             options: {
                 responsive: true,
-                maintainAspectRatio: true,
+                maintainAspectRatio: false,
                 scales: {
                     r: {
                         angleLines: {
@@ -169,7 +188,8 @@ const initSkillsChart = () => {
                             font: {
                                 family: 'Inter, sans-serif',
                                 size: 12
-                            }
+                            },
+                            padding: 10
                         },
                         ticks: {
                             display: false,
@@ -183,18 +203,33 @@ const initSkillsChart = () => {
                 plugins: {
                     legend: {
                         display: false
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(10, 14, 23, 0.9)',
+                        titleColor: 'rgba(48, 249, 7, 1)',
+                        bodyColor: '#fff',
+                        borderColor: 'rgba(48, 249, 7, 0.3)',
+                        borderWidth: 1
                     }
                 }
             }
         });
+        
+        // Store chart instance for potential updates
+        window.skillsChart = skillsChart;
+        
     } catch (error) {
         console.error('Error creating skills chart:', error);
+        // Fallback: Hide canvas and show message
+        ctx.parentElement.innerHTML = '<p style="color: var(--primary-color); text-align: center;">Skills visualization not available</p>';
     }
 };
 
 // ===== ANIMATE SKILL BARS =====
 const animateSkillBars = () => {
     const skillItems = document.querySelectorAll('.skill__item');
+    
+    if (!skillItems.length) return;
     
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -203,6 +238,7 @@ const animateSkillBars = () => {
                 const width = skillBar.style.width || skillBar.getAttribute('data-width');
                 
                 if (width) {
+                    // Reset to 0 then animate to target width
                     skillBar.style.width = '0';
                     
                     setTimeout(() => {
@@ -214,8 +250,8 @@ const animateSkillBars = () => {
             }
         });
     }, {
-        threshold: 0.3,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.1,
+        rootMargin: '50px'
     });
     
     skillItems.forEach(item => {
@@ -237,6 +273,43 @@ const initFormValidation = () => {
     
     if (!contactForm) return;
     
+    // Real-time validation
+    const inputs = contactForm.querySelectorAll('.contact__input, .contact__textarea');
+    inputs.forEach(input => {
+        // Add placeholder for floating labels
+        if (!input.hasAttribute('placeholder')) {
+            input.setAttribute('placeholder', ' ');
+        }
+        
+        input.addEventListener('blur', () => {
+            validateInput(input);
+        });
+        
+        input.addEventListener('input', () => {
+            if (input.value.trim()) {
+                input.style.borderColor = 'var(--primary-color)';
+            }
+        });
+    });
+    
+    const validateInput = (input) => {
+        if (!input.value.trim()) {
+            input.style.borderColor = 'var(--danger-color)';
+            return false;
+        }
+        
+        if (input.type === 'email') {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(input.value.trim())) {
+                input.style.borderColor = 'var(--warning-color)';
+                return false;
+            }
+        }
+        
+        input.style.borderColor = 'var(--primary-color)';
+        return true;
+    };
+    
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
         
@@ -244,11 +317,8 @@ const initFormValidation = () => {
         let isValid = true;
         
         inputs.forEach(input => {
-            if (!input.value.trim()) {
-                input.style.borderColor = 'var(--danger-color)';
+            if (!validateInput(input)) {
                 isValid = false;
-            } else {
-                input.style.borderColor = 'var(--primary-color)';
             }
         });
         
@@ -256,13 +326,24 @@ const initFormValidation = () => {
             // Show success message
             const submitButton = contactForm.querySelector('.contact__button');
             const originalText = submitButton.innerHTML;
+            const originalBg = submitButton.style.background;
             
             submitButton.innerHTML = '<i class="bx bx-check"></i> Message Sent Successfully';
             submitButton.style.background = 'var(--success-color)';
+            submitButton.disabled = true;
+            
+            // In a real application, you would send the form data to a server here
+            console.log('Form submitted:', {
+                name: contactForm.querySelector('[placeholder=" "]').value,
+                email: contactForm.querySelector('[type="email"]').value,
+                subject: contactForm.querySelectorAll('[placeholder=" "]')[2]?.value,
+                message: contactForm.querySelector('textarea').value
+            });
             
             setTimeout(() => {
                 submitButton.innerHTML = originalText;
-                submitButton.style.background = '';
+                submitButton.style.background = originalBg;
+                submitButton.disabled = false;
                 contactForm.reset();
                 
                 // Reset labels
@@ -278,34 +359,26 @@ const initFormValidation = () => {
             }, 3000);
         }
     });
-    
-    // Real-time validation
-    const inputs = contactForm.querySelectorAll('.contact__input, .contact__textarea');
-    inputs.forEach(input => {
-        input.addEventListener('input', () => {
-            if (input.value.trim()) {
-                input.style.borderColor = 'var(--primary-color)';
-            }
-        });
-        
-        // Add placeholder for floating labels
-        if (!input.hasAttribute('placeholder')) {
-            input.setAttribute('placeholder', ' ');
-        }
-    });
 };
 
 // ===== SMOOTH SCROLL =====
 const initSmoothScroll = () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
+            const href = this.getAttribute('href');
             
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
+            if (href === '#' || href === '#!') return;
             
-            const targetElement = document.querySelector(targetId);
+            const targetElement = document.querySelector(href);
             if (targetElement) {
+                e.preventDefault();
+                
+                // Close mobile menu if open
+                if (navMenu.classList.contains('show-menu')) {
+                    navMenu.classList.remove('show-menu');
+                    document.body.style.overflow = '';
+                }
+                
                 window.scrollTo({
                     top: targetElement.offsetTop - 80,
                     behavior: 'smooth'
@@ -322,14 +395,13 @@ const initRevealOnScroll = () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('revealed');
                 observer.unobserve(entry.target);
             }
         });
     }, {
         threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        rootMargin: '50px'
     });
     
     revealElements.forEach(element => {
@@ -340,43 +412,133 @@ const initRevealOnScroll = () => {
     });
 };
 
+// Add CSS for reveal animation
+const revealStyle = document.createElement('style');
+revealStyle.textContent = `
+    .experience__item.revealed,
+    .project__card.revealed,
+    .certification__card.revealed,
+    .skills__group.revealed,
+    .about__detail.revealed {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+`;
+document.head.appendChild(revealStyle);
+
+// ===== DEBOUNCE FUNCTION =====
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
 // ===== INITIALIZE EVERYTHING =====
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize all functions
     initSmoothScroll();
     initFormValidation();
     initRevealOnScroll();
-    animateSkillBars();
     
-    // Initialize skills chart after a delay (wait for Chart.js to load)
-    setTimeout(() => {
-        if (typeof Chart !== 'undefined') {
-            initSkillsChart();
-        } else {
-            console.warn('Chart.js not loaded. Skills chart will not display.');
-        }
-    }, 1000);
+    // Initialize skills chart
+    if (typeof Chart !== 'undefined') {
+        initSkillsChart();
+    } else {
+        console.warn('Chart.js not loaded. Loading now...');
+        // Dynamically load Chart.js if not loaded
+        const script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/chart.js';
+        script.onload = initSkillsChart;
+        document.head.appendChild(script);
+    }
     
     // Scroll to top on page refresh
     window.scrollTo(0, 0);
+    
+    // Set initial active nav link
+    scrollActive();
+    
+    // Set initial scroll up button state
+    scrollUpShow();
 });
 
 // ===== WINDOW LOAD EVENT =====
 window.addEventListener('load', () => {
-    // Animate skill bars on load
-    setTimeout(animateSkillBars, 500);
-    
-    // Update active nav link
-    scrollActive();
-    
-    // Show/hide scroll up button
-    scrollUpShow();
+    // Animate skill bars
+    animateSkillBars();
 });
 
 // ===== RESIZE HANDLER =====
-window.addEventListener('resize', () => {
+const handleResize = debounce(() => {
     // Close mobile menu on resize to desktop
     if (window.innerWidth > 768 && navMenu.classList.contains('show-menu')) {
         navMenu.classList.remove('show-menu');
+        document.body.style.overflow = '';
     }
+    
+    // Reinitialize charts if needed
+    if (window.skillsChart && typeof window.skillsChart.resize === 'function') {
+        window.skillsChart.resize();
+    }
+}, 250);
+
+window.addEventListener('resize', handleResize);
+
+// ===== ERROR HANDLING =====
+window.addEventListener('error', (e) => {
+    console.error('Script error:', e.error);
 });
+
+// ===== EXPORT FOR MODULES (if needed) =====
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = {
+        initSkillsChart,
+        animateSkillBars,
+        initFormValidation
+    };
+}
+// ===== BACKGROUND IMAGE OPTIMIZATION =====
+const optimizeBackgrounds = () => {
+    // Check if user prefers reduced motion
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    
+    // Remove parallax effect if user prefers reduced motion
+    if (prefersReducedMotion) {
+        const sections = document.querySelectorAll('.home, .experience.section');
+        sections.forEach(section => {
+            section.style.backgroundAttachment = 'scroll';
+        });
+    }
+    
+    // Lazy load background images on mobile
+    if (window.innerWidth < 768) {
+        const homeSection = document.querySelector('.home');
+        const experienceSection = document.querySelector('.experience.section');
+        
+        if (homeSection) {
+            homeSection.style.backgroundImage = `linear-gradient(135deg, rgba(2, 11, 40, 0.9), rgba(19, 24, 42, 0.95)), url('assets/img/hero-bg.jpg')`;
+        }
+        
+        if (experienceSection) {
+            experienceSection.style.backgroundImage = `linear-gradient(135deg, rgba(10, 14, 23, 0.95), rgba(19, 24, 42, 0.98)), url('assets/img/experience-bg.jpg')`;
+        }
+    }
+};
+
+// Initialize in DOMContentLoaded
+document.addEventListener('DOMContentLoaded', () => {
+    // ... existing code ...
+    optimizeBackgrounds();
+});
+
+// Update on resize
+const handleResize = debounce(() => {
+    // ... existing code ...
+    optimizeBackgrounds();
+}, 250);

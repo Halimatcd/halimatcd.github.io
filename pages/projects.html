@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Halimat Aminu - Cybersecurity Engineer</title>
-    <meta name="description" content="Detailed cybersecurity projects and case studies by Halimat Aminu">
-    // this is core
+    <title>Cybersecurity Projects | Halimat Aminu - Cybersecurity Engineer & CTO</title>
+    <meta name="description" content="Detailed cybersecurity projects and case studies by Halimat Aminu. Enterprise cloud security migration, automated DevSecOps pipelines, and zero trust implementations.">
+    <meta name="keywords" content="cybersecurity projects, cloud security migration, DevSecOps case studies, zero trust implementation, security architecture">
+    <meta name="author" content="Halimat Aminu">
+    
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,170 +15,19 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     
     <!-- Main CSS -->
-    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     
     <!-- Projects CSS -->
-    <style>
-        .projects-hero {
-            padding: 10rem 0 6rem;
-            background: linear-gradient(135deg, rgba(10, 14, 23, 0.9), rgba(19, 24, 42, 0.9)),
-                        url('../assets/img/zero_trust.jpg') center/cover;
-            text-align: center;
-        }
-        
-        .projects-hero__title {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .projects-hero__subtitle {
-            font-size: 1.25rem;
-            color: rgba(255, 255, 255, 0.8);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .case-study {
-            padding: 6rem 0;
-            background: var(--dark-color);
-        }
-        
-        .case-study:nth-child(even) {
-            background: var(--dark-color-alt);
-        }
-        
-        .case-study__container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-        
-        .case-study__image {
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            position: relative;
-        }
-        
-        .case-study__image img {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        
-        .case-study:hover .case-study__image img {
-            transform: scale(1.05);
-        }
-        
-        .case-study__tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .case-study__tag {
-            padding: 0.25rem 1rem;
-            background: rgba(0, 212, 255, 0.1);
-            border: 1px solid var(--primary-color);
-            border-radius: 20px;
-            font-size: 0.875rem;
-            color: var(--primary-color);
-        }
-        
-        .case-study__stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-        
-        .case-study__stat {
-            text-align: center;
-        }
-        
-        .case-study__stat-number {
-            display: block;
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-        
-        .case-study__stat-label {
-            font-size: 0.875rem;
-            color: var(--gray-color);
-        }
-        
-        .case-study__challenge,
-        .case-study__solution,
-        .case-study__results {
-            margin-bottom: 1.5rem;
-        }
-        
-        .case-study__subtitle {
-            font-size: 1.25rem;
-            color: var(--primary-color);
-            margin-bottom: 0.75rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .case-study__tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-            margin: 1.5rem 0;
-        }
-        
-        .tech-stack__item {
-            padding: 0.5rem 1rem;
-            background: var(--dark-color);
-            border-radius: var(--border-radius);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.875rem;
-        }
-        
-        .tech-stack__item i {
-            color: var(--primary-color);
-            font-size: 1.25rem;
-        }
-        
-        .back-to-home {
-            text-align: center;
-            padding: 3rem 0;
-        }
-        
-        @media (max-width: 992px) {
-            .case-study__container {
-                grid-template-columns: 1fr;
-            }
-            
-            .case-study__stats {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .projects-hero__title {
-                font-size: 2.5rem;
-            }
-            
-            .case-study__stats {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/projects.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
 <body>
-    <!-- Header (Same as index.html) -->
+    <!-- Header -->
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="../index.html" class="nav__logo">
+            <a href="index.html" class="nav__logo">
                 <span class="nav__logo-circle">HA</span>
                 <span class="nav__logo-name">Halimat Aminu</span>
             </a>
@@ -184,25 +35,25 @@
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="../index.html" class="nav__link">Home</a>
+                        <a href="index.html" class="nav__link">Home</a>
                     </li>
                     <li class="nav__item">
-                        <a href="../index.html#about" class="nav__link">About</a>
+                        <a href="index.html#about" class="nav__link">About</a>
                     </li>
                     <li class="nav__item">
-                        <a href="../index.html#experience" class="nav__link">Experience</a>
+                        <a href="index.html#experience" class="nav__link">Experience</a>
                     </li>
                     <li class="nav__item">
                         <a href="projects.html" class="nav__link active-link">Projects</a>
                     </li>
                     <li class="nav__item">
-                        <a href="../index.html#skills" class="nav__link">Skills</a>
+                        <a href="index.html#skills" class="nav__link">Skills</a>
                     </li>
                     <li class="nav__item">
                         <a href="blog.html" class="nav__link">Blog</a>
                     </li>
                     <li class="nav__item">
-                        <a href="../index.html#contact" class="nav__link">Contact</a>
+                        <a href="index.html#contact" class="nav__link">Contact</a>
                     </li>
                 </ul>
 
@@ -234,7 +85,7 @@
     <section class="case-study">
         <div class="container case-study__container">
             <div class="case-study__image">
-                <img src="../assets/img/Sec_cloud2.jpg" alt="Secure Cloud Infrastructure Migration">
+                <img src="assets/img/Sec_cloud2.jpg" alt="Secure Cloud Infrastructure Migration architecture diagram showing AWS services">
             </div>
             
             <div class="case-study__content">
@@ -312,7 +163,7 @@
                     </div>
                 </div>
                 
-                <a href="#" class="button">
+                <a href="case-study-cloud-migration.pdf" class="button" download>
                     <i class='bx bx-download'></i>
                     Download Case Study PDF
                 </a>
@@ -409,7 +260,7 @@
             </div>
             
             <div class="case-study__image">
-                <img src="../assets/img/devsec_pipeline2.jpg" alt="Automated DevSecOps Pipeline">
+                <img src="assets/img/devsec_pipeline2.jpg" alt="Automated DevSecOps pipeline workflow diagram">
             </div>
         </div>
     </section>
@@ -418,7 +269,7 @@
     <section class="case-study">
         <div class="container case-study__container">
             <div class="case-study__image">
-                <img src="../assets/img/zero_trust.jpg" alt="Zero Trust Network Implementation">
+                <img src="assets/img/zero_trust.jpg" alt="Zero trust network architecture implementation diagram">
             </div>
             
             <div class="case-study__content">
@@ -493,7 +344,7 @@
                     </div>
                 </div>
                 
-                <a href="#" class="button">
+                <a href="case-study-zero-trust.html" class="button">
                     <i class='bx bx-code-alt'></i>
                     View Implementation Details
                 </a>
@@ -506,22 +357,22 @@
         <div class="container">
             <h3>Want to see more projects?</h3>
             <p>Check out my GitHub for open-source security tools and automation scripts.</p>
-            <a href="https://github.com/Halimatcd" class="button" target="_blank">
+            <a href="https://github.com/Halimatcd" class="button" target="_blank" rel="noopener noreferrer">
                 <i class='bx bxl-github'></i>
                 View GitHub Profile
             </a>
-            <a href="../index.html" class="button button--ghost">
+            <a href="index.html" class="button button--ghost">
                 <i class='bx bx-home'></i>
                 Back to Home
             </a>
         </div>
     </section>
 
-    <!-- Footer (Same as index.html) -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer__container container">
             <div class="footer__content">
-                <a href="../index.html" class="footer__logo">
+                <a href="index.html" class="footer__logo">
                     <span class="footer__logo-circle">HA</span>
                     <span class="footer__logo-name">Halimat Aminu</span>
                 </a>
@@ -532,16 +383,16 @@
                 </p>
                 
                 <div class="footer__social">
-                    <a href="#" class="footer__social-link">
+                    <a href="https://github.com/Halimatcd" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
                         <i class='bx bxl-github'></i>
                     </a>
-                    <a href="#" class="footer__social-link">
+                    <a href="https://www.linkedin.com/in/halimat-aminu-40596719a/" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
                         <i class='bx bxl-linkedin'></i>
                     </a>
-                    <a href="#" class="footer__social-link">
+                    <a href="https://twitter.com/" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Twitter Profile">
                         <i class='bx bxl-twitter'></i>
                     </a>
-                    <a href="#" class="footer__social-link">
+                    <a href="#" class="footer__social-link" aria-label="Medium Articles">
                         <i class='bx bxl-medium'></i>
                     </a>
                 </div>
@@ -550,21 +401,21 @@
             <div class="footer__links">
                 <h3 class="footer__title">Quick Links</h3>
                 <ul class="footer__list">
-                    <li><a href="../index.html" class="footer__link">Home</a></li>
-                    <li><a href="../index.html#about" class="footer__link">About</a></li>
-                    <li><a href="../index.html#experience" class="footer__link">Experience</a></li>
+                    <li><a href="index.html" class="footer__link">Home</a></li>
+                    <li><a href="index.html#about" class="footer__link">About</a></li>
+                    <li><a href="index.html#experience" class="footer__link">Experience</a></li>
                     <li><a href="projects.html" class="footer__link">Projects</a></li>
-                    <li><a href="../index.html#contact" class="footer__link">Contact</a></li>
+                    <li><a href="index.html#contact" class="footer__link">Contact</a></li>
                 </ul>
             </div>
             
             <div class="footer__links">
                 <h3 class="footer__title">Services</h3>
                 <ul class="footer__list">
-                    <li><a href="#" class="footer__link">Security Audits</a></li>
-                    <li><a href="#" class="footer__link">Cloud Security</a></li>
-                    <li><a href="#" class="footer__link">DevSecOps</a></li>
-                    <li><a href="#" class="footer__link">Incident Response</a></li>
+                    <li><a href="index.html#contact" class="footer__link">Security Audits</a></li>
+                    <li><a href="index.html#contact" class="footer__link">Cloud Security</a></li>
+                    <li><a href="index.html#contact" class="footer__link">DevSecOps</a></li>
+                    <li><a href="index.html#contact" class="footer__link">Incident Response</a></li>
                 </ul>
             </div>
             
@@ -573,9 +424,9 @@
                 <p class="footer__newsletter-description">
                     Subscribe for cybersecurity updates and best practices
                 </p>
-                <form class="footer__newsletter-form">
-                    <input type="email" placeholder="Your email" class="footer__newsletter-input">
-                    <button type="submit" class="footer__newsletter-button">
+                <form class="footer__newsletter-form" id="projects-newsletter-form">
+                    <input type="email" placeholder="Your email" class="footer__newsletter-input" required aria-label="Email for security insights newsletter">
+                    <button type="submit" class="footer__newsletter-button" aria-label="Subscribe to newsletter">
                         <i class='bx bx-send'></i>
                     </button>
                 </form>
@@ -584,7 +435,7 @@
         
         <div class="footer__bottom">
             <p class="footer__copy">
-                &copy; 2024 Halimat Aminu. All rights reserved. | 
+                &copy; <span id="current-year">2024</span> Halimat Aminu. All rights reserved. | 
                 <span class="footer__security">
                     <i class='bx bxs-lock-alt'></i>
                     Securely hosted with HTTPS
@@ -594,36 +445,12 @@
     </footer>
 
     <!-- Scroll Up -->
-    <a href="#" class="scrollup" id="scroll-up">
+    <a href="#" class="scrollup" id="scroll-up" aria-label="Scroll to top">
         <i class='bx bx-up-arrow-alt'></i>
     </a>
 
     <!-- JavaScript -->
-    <script src="../assets/js/main.js"></script>
-    <script>
-        // Initialize page-specific JavaScript
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add animation to case studies on scroll
-            const caseStudies = document.querySelectorAll('.case-study');
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, {
-                threshold: 0.1
-            });
-            
-            caseStudies.forEach(study => {
-                study.style.opacity = '0';
-                study.style.transform = 'translateY(50px)';
-                study.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-                observer.observe(study);
-            });
-        });
-    </script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/projects.js"></script>
 </body>
 </html>
