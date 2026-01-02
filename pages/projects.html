@@ -8,6 +8,12 @@
     <meta name="keywords" content="cybersecurity projects, cloud security migration, DevSecOps case studies, zero trust implementation, security architecture">
     <meta name="author" content="Halimat Aminu">
     
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Cybersecurity Projects | Halimat Aminu">
+    <meta property="og:description" content="Cybersecurity projects and case studies by Halimat Aminu">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://halimataminu.com/projects.html">
+    
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,9 +22,6 @@
     
     <!-- Main CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
-    
-    <!-- Projects CSS -->
-    <link rel="stylesheet" href="assets/css/projects.css">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
@@ -63,8 +66,8 @@
             </div>
 
             <div class="nav__buttons">
-                <i class='bx bx-moon change-theme' id="theme-button"></i>
-                <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-moon change-theme' id="theme-button" aria-label="Toggle dark/light mode"></i>
+                <div class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation menu">
                     <i class='bx bx-menu'></i>
                 </div>
             </div>
@@ -82,10 +85,10 @@
     </section>
 
     <!-- Case Study 1 -->
-    <section class="case-study">
+    <section class="case-study" id="case-study-1">
         <div class="container case-study__container">
             <div class="case-study__image">
-                <img src="assets/img/Sec_cloud2.jpg" alt="Secure Cloud Infrastructure Migration architecture diagram showing AWS services">
+                <img src="assets/img/Sec_cloud2.jpg" alt="Secure Cloud Infrastructure Migration architecture diagram showing AWS services" loading="lazy">
             </div>
             
             <div class="case-study__content">
@@ -163,7 +166,7 @@
                     </div>
                 </div>
                 
-                <a href="case-study-cloud-migration.pdf" class="button" download>
+                <a href="assets/docs/case-study-cloud-migration.pdf" class="button" download aria-label="Download Case Study PDF">
                     <i class='bx bx-download'></i>
                     Download Case Study PDF
                 </a>
@@ -172,7 +175,7 @@
     </section>
 
     <!-- Case Study 2 -->
-    <section class="case-study">
+    <section class="case-study" id="case-study-2">
         <div class="container case-study__container">
             <div class="case-study__content">
                 <div class="case-study__tags">
@@ -260,16 +263,16 @@
             </div>
             
             <div class="case-study__image">
-                <img src="assets/img/devsec_pipeline2.jpg" alt="Automated DevSecOps pipeline workflow diagram">
+                <img src="assets/img/devsec_pipeline2.jpg" alt="Automated DevSecOps pipeline workflow diagram" loading="lazy">
             </div>
         </div>
     </section>
 
     <!-- Case Study 3 -->
-    <section class="case-study">
+    <section class="case-study" id="case-study-3">
         <div class="container case-study__container">
             <div class="case-study__image">
-                <img src="assets/img/zero_trust.jpg" alt="Zero trust network architecture implementation diagram">
+                <img src="assets/img/zero_trust.jpg" alt="Zero trust network architecture implementation diagram" loading="lazy">
             </div>
             
             <div class="case-study__content">
@@ -344,7 +347,7 @@
                     </div>
                 </div>
                 
-                <a href="case-study-zero-trust.html" class="button">
+                <a href="#case-study-3" class="button" aria-label="View implementation details">
                     <i class='bx bx-code-alt'></i>
                     View Implementation Details
                 </a>
@@ -357,11 +360,11 @@
         <div class="container">
             <h3>Want to see more projects?</h3>
             <p>Check out my GitHub for open-source security tools and automation scripts.</p>
-            <a href="https://github.com/Halimatcd" class="button" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/Halimatcd" class="button" target="_blank" rel="noopener noreferrer" aria-label="View GitHub Profile">
                 <i class='bx bxl-github'></i>
                 View GitHub Profile
             </a>
-            <a href="index.html" class="button button--ghost">
+            <a href="index.html" class="button button--ghost" aria-label="Back to Home">
                 <i class='bx bx-home'></i>
                 Back to Home
             </a>
@@ -405,6 +408,7 @@
                     <li><a href="index.html#about" class="footer__link">About</a></li>
                     <li><a href="index.html#experience" class="footer__link">Experience</a></li>
                     <li><a href="projects.html" class="footer__link">Projects</a></li>
+                    <li><a href="blog.html" class="footer__link">Blog</a></li>
                     <li><a href="index.html#contact" class="footer__link">Contact</a></li>
                 </ul>
             </div>
@@ -424,7 +428,7 @@
                 <p class="footer__newsletter-description">
                     Subscribe for cybersecurity updates and best practices
                 </p>
-                <form class="footer__newsletter-form" id="projects-newsletter-form">
+                <form class="footer__newsletter-form" id="newsletter-form">
                     <input type="email" placeholder="Your email" class="footer__newsletter-input" required aria-label="Email for security insights newsletter">
                     <button type="submit" class="footer__newsletter-button" aria-label="Subscribe to newsletter">
                         <i class='bx bx-send'></i>
@@ -451,6 +455,5 @@
 
     <!-- JavaScript -->
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/projects.js"></script>
 </body>
 </html>

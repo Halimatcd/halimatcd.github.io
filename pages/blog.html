@@ -28,9 +28,6 @@
     <!-- Main CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
     
-    <!-- Blog CSS -->
-    <link rel="stylesheet" href="assets/css/blog.css">
-    
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
@@ -73,8 +70,8 @@
             </div>
 
             <div class="nav__buttons">
-                <i class='bx bx-moon change-theme' id="theme-button"></i>
-                <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-moon change-theme' id="theme-button" aria-label="Toggle dark/light mode"></i>
+                <div class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation menu">
                     <i class='bx bx-menu'></i>
                 </div>
             </div>
@@ -112,7 +109,7 @@
                 <!-- Blog Post 1 -->
                 <article class="blog-card" data-category="cloud-security">
                     <div class="blog-card__image">
-                        <img src="assets/img/Sec_cloud2.jpg" alt="Secure Cloud Infrastructure with zero trust architecture diagram">
+                        <img src="assets/img/Sec_cloud2.jpg" alt="Secure Cloud Infrastructure with zero trust architecture diagram" loading="lazy">
                     </div>
                     <div class="blog-card__content">
                         <div class="blog-card__meta">
@@ -129,7 +126,7 @@
                                 <i class='bx bx-time'></i>
                                 8 min read
                             </span>
-                            <a href="article-zero-trust-cloud.html" class="blog-card__link">
+                            <a href="#zero-trust-cloud" class="blog-card__link" aria-label="Read article about Zero Trust in Cloud Environments">
                                 Read More
                                 <i class='bx bx-right-arrow-alt'></i>
                             </a>
@@ -140,7 +137,7 @@
                 <!-- Blog Post 2 -->
                 <article class="blog-card" data-category="devsecops">
                     <div class="blog-card__image">
-                        <img src="assets/img/devsec_pipeline2.jpg" alt="Automated DevSecOps CI/CD pipeline workflow">
+                        <img src="assets/img/devsec_pipeline2.jpg" alt="Automated DevSecOps CI/CD pipeline workflow" loading="lazy">
                     </div>
                     <div class="blog-card__content">
                         <div class="blog-card__meta">
@@ -157,7 +154,7 @@
                                 <i class='bx bx-time'></i>
                                 12 min read
                             </span>
-                            <a href="article-devsecops-pipelines.html" class="blog-card__link">
+                            <a href="#devsecops-pipelines" class="blog-card__link" aria-label="Read article about building secure CI/CD pipelines">
                                 Read More
                                 <i class='bx bx-right-arrow-alt'></i>
                             </a>
@@ -168,7 +165,7 @@
                 <!-- Blog Post 3 -->
                 <article class="blog-card" data-category="threat-intel">
                     <div class="blog-card__image">
-                        <img src="assets/img/zero_trust.jpg" alt="Threat intelligence monitoring dashboard">
+                        <img src="assets/img/zero_trust.jpg" alt="Threat intelligence monitoring dashboard" loading="lazy">
                     </div>
                     <div class="blog-card__content">
                         <div class="blog-card__meta">
@@ -185,7 +182,7 @@
                                 <i class='bx bx-time'></i>
                                 10 min read
                             </span>
-                            <a href="article-threat-intelligence.html" class="blog-card__link">
+                            <a href="#threat-intelligence" class="blog-card__link" aria-label="Read article about threat intelligence strategies">
                                 Read More
                                 <i class='bx bx-right-arrow-alt'></i>
                             </a>
@@ -196,7 +193,7 @@
                 <!-- Blog Post 4 -->
                 <article class="blog-card" data-category="compliance">
                     <div class="blog-card__image">
-                        <img src="assets/img/work4.jpg" alt="Compliance automation with infrastructure as code">
+                        <img src="assets/img/work4.jpg" alt="Compliance automation with infrastructure as code" loading="lazy">
                     </div>
                     <div class="blog-card__content">
                         <div class="blog-card__meta">
@@ -213,7 +210,7 @@
                                 <i class='bx bx-time'></i>
                                 6 min read
                             </span>
-                            <a href="article-compliance-automation.html" class="blog-card__link">
+                            <a href="#compliance-automation" class="blog-card__link" aria-label="Read article about compliance automation">
                                 Read More
                                 <i class='bx bx-right-arrow-alt'></i>
                             </a>
@@ -224,7 +221,7 @@
                 <!-- Blog Post 5 -->
                 <article class="blog-card" data-category="zero-trust">
                     <div class="blog-card__image">
-                        <img src="assets/img/work5.jpg" alt="Zero trust network access architecture">
+                        <img src="assets/img/work5.jpg" alt="Zero trust network access architecture" loading="lazy">
                     </div>
                     <div class="blog-card__content">
                         <div class="blog-card__meta">
@@ -241,7 +238,7 @@
                                 <i class='bx bx-time'></i>
                                 7 min read
                             </span>
-                            <a href="article-zero-trust-access.html" class="blog-card__link">
+                            <a href="#zero-trust-access" class="blog-card__link" aria-label="Read article about Zero Trust Network Access">
                                 Read More
                                 <i class='bx bx-right-arrow-alt'></i>
                             </a>
@@ -252,7 +249,7 @@
                 <!-- Blog Post 6 -->
                 <article class="blog-card" data-category="cloud-security">
                     <div class="blog-card__image">
-                        <img src="assets/img/work6.jpg" alt="Kubernetes security best practices">
+                        <img src="assets/img/work6.jpg" alt="Kubernetes security best practices" loading="lazy">
                     </div>
                     <div class="blog-card__content">
                         <div class="blog-card__meta">
@@ -269,7 +266,7 @@
                                 <i class='bx bx-time'></i>
                                 15 min read
                             </span>
-                            <a href="article-kubernetes-security.html" class="blog-card__link">
+                            <a href="#kubernetes-security" class="blog-card__link" aria-label="Read article about Kubernetes security">
                                 Read More
                                 <i class='bx bx-right-arrow-alt'></i>
                             </a>
@@ -287,27 +284,27 @@
                         Popular Posts
                     </h3>
                     <div class="popular-posts__list">
-                        <a href="article-zero-trust-cloud.html" class="popular-post">
+                        <a href="#zero-trust-cloud" class="popular-post">
                             <div class="popular-post__image">
-                                <img src="assets/img/Sec_cloud2.jpg" alt="Zero Trust Cloud">
+                                <img src="assets/img/Sec_cloud2.jpg" alt="Zero Trust Cloud" loading="lazy">
                             </div>
                             <div class="popular-post__content">
                                 <h4>Implementing Zero Trust in Cloud Environments</h4>
                                 <span class="popular-post__date">March 15, 2024</span>
                             </div>
                         </a>
-                        <a href="article-devsecops-pipelines.html" class="popular-post">
+                        <a href="#devsecops-pipelines" class="popular-post">
                             <div class="popular-post__image">
-                                <img src="assets/img/devsec_pipeline2.jpg" alt="DevSecOps Pipeline">
+                                <img src="assets/img/devsec_pipeline2.jpg" alt="DevSecOps Pipeline" loading="lazy">
                             </div>
                             <div class="popular-post__content">
                                 <h4>Building Secure CI/CD Pipelines from Scratch</h4>
                                 <span class="popular-post__date">February 28, 2024</span>
                             </div>
                         </a>
-                        <a href="article-kubernetes-security.html" class="popular-post">
+                        <a href="#kubernetes-security" class="popular-post">
                             <div class="popular-post__image">
-                                <img src="assets/img/work6.jpg" alt="Kubernetes Security">
+                                <img src="assets/img/work6.jpg" alt="Kubernetes Security" loading="lazy">
                             </div>
                             <div class="popular-post__content">
                                 <h4>Kubernetes Security Best Practices</h4>
@@ -430,7 +427,7 @@
                 <p class="footer__newsletter-description">
                     Subscribe for cybersecurity updates and best practices
                 </p>
-                <form class="footer__newsletter-form" id="footer-newsletter-form">
+                <form class="footer__newsletter-form" id="newsletter-form">
                     <input type="email" placeholder="Your email" class="footer__newsletter-input" required aria-label="Email for security insights newsletter">
                     <button type="submit" class="footer__newsletter-button" aria-label="Subscribe to newsletter">
                         <i class='bx bx-send'></i>
@@ -457,6 +454,5 @@
 
     <!-- JavaScript -->
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/blog.js"></script>
 </body>
 </html>

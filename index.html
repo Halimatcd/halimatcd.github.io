@@ -36,15 +36,12 @@
     
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
-    
-    <!-- Chart.js for Skills Radar Chart -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js" crossorigin="anonymous" defer></script>
 </head>
 <body>
     <!-- Header & Navigation -->
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="#" class="nav__logo">
+            <a href="index.html" class="nav__logo">
                 <span class="nav__logo-circle">HA</span>
                 <span class="nav__logo-name">Halimat Aminu</span>
             </a>
@@ -61,13 +58,16 @@
                         <a href="#experience" class="nav__link">Experience</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#projects" class="nav__link">Projects</a>
+                        <a href="projects.html" class="nav__link">Projects</a>
                     </li>
                     <li class="nav__item">
                         <a href="#skills" class="nav__link">Skills</a>
                     </li>
                     <li class="nav__item">
                         <a href="#certifications" class="nav__link">Certifications</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="blog.html" class="nav__link">Blog</a>
                     </li>
                     <li class="nav__item">
                         <a href="#contact" class="nav__link">Contact</a>
@@ -116,7 +116,7 @@
                             <i class='bx bxs-shield-alt'></i>
                             Secure Contact
                         </a>
-                        <a href="#projects" class="button button--ghost">
+                        <a href="projects.html" class="button button--ghost">
                             View Projects
                         </a>
                     </div>
@@ -296,7 +296,7 @@
                                 <div class="experience__icon">
                                     <i class='bx bxs-briefcase-alt-2'></i>
                                 </div>
-                                <div class="experience__date">Jan 2025 - Dec 2025</div>
+                                <div class="experience__date">Jan 2024 - Present</div>
                             </div>
                             
                             <div class="experience__content">
@@ -342,7 +342,7 @@
                                 <div class="experience__icon">
                                     <i class='bx bxs-briefcase-alt-2'></i>
                                 </div>
-                                <div class="experience__date">Mar 2023 - Dec 2024</div>
+                                <div class="experience__date">Mar 2023 - Dec 2023</div>
                             </div>
                             
                             <div class="experience__content">
@@ -394,7 +394,7 @@
                 <!-- Project 1 -->
                 <article class="project__card">
                     <div class="project__image">
-                        <img src="assets/img/Sec_cloud2.jpg" alt="Secure Cloud Infrastructure Migration architecture">
+                        <img src="assets/img/Sec_cloud2.jpg" alt="Secure Cloud Infrastructure Migration architecture diagram showing AWS services" loading="lazy">
                         <div class="project__overlay">
                             <span class="project__tag">AWS Security</span>
                             <span class="project__tag">DevSecOps</span>
@@ -425,7 +425,7 @@
                 <!-- Project 2 -->
                 <article class="project__card">
                     <div class="project__image">
-                        <img src="assets/img/devsec_pipeline2.jpg" alt="Automated DevSecOps CI/CD pipeline">
+                        <img src="assets/img/devsec_pipeline2.jpg" alt="Automated DevSecOps CI/CD pipeline workflow diagram" loading="lazy">
                         <div class="project__overlay">
                             <span class="project__tag">CI/CD</span>
                             <span class="project__tag">Automation</span>
@@ -456,7 +456,7 @@
                 <!-- Project 3 -->
                 <article class="project__card">
                     <div class="project__image">
-                        <img src="assets/img/zero_trust.jpg" alt="Zero Trust Network Implementation architecture">
+                        <img src="assets/img/zero_trust.jpg" alt="Zero Trust Network Implementation architecture diagram" loading="lazy">
                         <div class="project__overlay">
                             <span class="project__tag">Zero Trust</span>
                             <span class="project__tag">Network Security</span>
@@ -483,6 +483,13 @@
                         </a>
                     </div>
                 </article>
+            </div>
+            
+            <div class="container" style="text-align: center; margin-top: 3rem;">
+                <a href="projects.html" class="button">
+                    <i class='bx bx-folder-open'></i>
+                    View All Projects
+                </a>
             </div>
         </section>
 
@@ -659,7 +666,7 @@
                         </div>
                         <h3 class="certification__title">Google Cloud - Professional Cloud Security Engineer</h3>
                         <p class="certification__issuer">Google Cloud</p>
-                        <span class="certification__date">2025</span>
+                        <span class="certification__date">2024</span>
                     </div>
 
                     <div class="certification__card" tabindex="0" role="article">
@@ -748,7 +755,7 @@
                     </div>
                 </div>
                 
-                <form class="contact__form" id="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+                <form class="contact__form" id="contact-form" method="POST">
                     <div class="contact__inputs">
                         <div class="contact__content">
                             <input type="text" name="name" placeholder=" " class="contact__input" required aria-label="Your Name">
@@ -784,7 +791,7 @@
     <footer class="footer">
         <div class="footer__container container">
             <div class="footer__content">
-                <a href="#" class="footer__logo">
+                <a href="index.html" class="footer__logo">
                     <span class="footer__logo-circle">HA</span>
                     <span class="footer__logo-name">Halimat Aminu</span>
                 </a>
@@ -812,22 +819,36 @@
             <div class="footer__links">
                 <h3 class="footer__title">Quick Links</h3>
                 <ul class="footer__list">
-                    <li><a href="#home" class="footer__link">Home</a></li>
-                    <li><a href="#about" class="footer__link">About</a></li>
-                    <li><a href="#experience" class="footer__link">Experience</a></li>
-                    <li><a href="#projects" class="footer__link">Projects</a></li>
-                    <li><a href="#contact" class="footer__link">Contact</a></li>
+                    <li><a href="index.html" class="footer__link">Home</a></li>
+                    <li><a href="index.html#about" class="footer__link">About</a></li>
+                    <li><a href="index.html#experience" class="footer__link">Experience</a></li>
+                    <li><a href="projects.html" class="footer__link">Projects</a></li>
+                    <li><a href="blog.html" class="footer__link">Blog</a></li>
+                    <li><a href="index.html#contact" class="footer__link">Contact</a></li>
                 </ul>
             </div>
             
             <div class="footer__links">
                 <h3 class="footer__title">Services</h3>
                 <ul class="footer__list">
-                    <li><a href="#contact" class="footer__link">Security Audits</a></li>
-                    <li><a href="#contact" class="footer__link">Cloud Security</a></li>
-                    <li><a href="#contact" class="footer__link">DevSecOps</a></li>
-                    <li><a href="#contact" class="footer__link">Incident Response</a></li>
+                    <li><a href="index.html#contact" class="footer__link">Security Audits</a></li>
+                    <li><a href="index.html#contact" class="footer__link">Cloud Security</a></li>
+                    <li><a href="index.html#contact" class="footer__link">DevSecOps</a></li>
+                    <li><a href="index.html#contact" class="footer__link">Incident Response</a></li>
                 </ul>
+            </div>
+            
+            <div class="footer__newsletter">
+                <h3 class="footer__title">Security Insights</h3>
+                <p class="footer__newsletter-description">
+                    Subscribe for cybersecurity updates and best practices
+                </p>
+                <form class="footer__newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="Your email" class="footer__newsletter-input" required aria-label="Email for security insights newsletter">
+                    <button type="submit" class="footer__newsletter-button" aria-label="Subscribe to newsletter">
+                        <i class='bx bx-send'></i>
+                    </button>
+                </form>
             </div>
         </div>
         
